@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:annotation>
+  <xs:documentation>
+    Kosik Manuscript Schema (Version 1.0)
+
+    Copyright (C) 2023  Gene Yu
+
+    This program is free software: you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the Free
+    Software Foundation, either version 3 of the License, or (at your option)
+    any later version.
+
+    This program is distributed in the hope that it will be useful, but WITHOUT
+    ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+    FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+    more details.
+
+    You should have received a copy of the GNU General Public License along with
+    this program.  If not, see &lt;https://www.gnu.org/licenses/>.
+  </xs:documentation>
+</xs:annotation>
+
+<xs:annotation>
+  <xs:documentation>
+    ================= Simple Attributes ========================================
+  </xs:documentation>
+</xs:annotation>
+
+<xs:attribute name="comma" type="xs:boolean">
+  <xs:annotation>
+    <xs:documentation>
+      for name suffixes
+    </xs:documentation>
+  </xs:annotation>
+</xs:attribute>
+
+<xs:attribute name="firstPage" type="xs:integer">
+  <xs:annotation>
+    <xs:documentation>
+      for the root manuscript element
+    </xs:documentation>
+  </xs:annotation>
+</xs:attribute>
+
+<xs:attribute name="label" type="xs:string">
+  <xs:annotation>
+    <xs:documentation>
+      for footnotes and note references
+    </xs:documentation>
+  </xs:annotation>
+</xs:attribute>
+
+<xs:attribute name="number" type="xs:integer">
+  <xs:annotation>
+    <xs:documentation>
+      for sectioning and list items
+    </xs:documentation>
+  </xs:annotation>
+</xs:attribute>
+
+<xs:attribute name="startNo" type="xs:integer">
+  <xs:annotation>
+    <xs:documentation>
+      for ordered lists
+    </xs:documentation>
+  </xs:annotation>
+</xs:attribute>
+
+<xs:annotation>
+  <xs:documentation>
+    ================= Complex Attributes =======================================
+  </xs:documentation>
+</xs:annotation>
+
+<xs:attribute name="indent">
+  <xs:simpleType>
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="65"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:attribute>
+
+<xs:attribute name="lineSpacing">
+  <xs:simpleType>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="single|double"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:attribute>
+
+<xs:annotation>
+  <xs:documentation>
+    ================= Simple Elements ==========================================
+  </xs:documentation>
+</xs:annotation>
+
+<xs:element name="br" type="xs:string" fixed="">
+  <xs:annotation>
+    <xs:documentation>
+      mandatory line break
+    </xs:documentation>
+  </xs:annotation>
+</xs:element>
+
+<xs:element name="div" type="xs:string" fixed="">
+  <xs:annotation>
+    <xs:documentation>
+      scene break
+    </xs:documentation>
+  </xs:annotation>
+</xs:element>
+
+<xs:element name="em" type="xs:string">
+  <xs:annotation>
+    <xs:documentation>
+      emphasis
+    </xs:documentation>
+  </xs:annotation>
+</xs:element>
+
+<xs:element name="gn" type="xs:string">
+  <xs:annotation>
+    <xs:documentation>
+      given name
+    </xs:documentation>
+  </xs:annotation>
+</xs:element>
+
+<xs:element name="pageBreak" type="xs:string" fixed="">
+  <xs:annotation>
+    <xs:documentation>
+      mandatory page break
+    </xs:documentation>
+  </xs:annotation>
+</xs:element>
+
+<xs:element name="prefix" type="xs:string">
+  <xs:annotation>
+    <xs:documentation>
+      name prefix
+    </xs:documentation>
+  </xs:annotation>
+</xs:element>
+
+<xs:element name="sn" type="xs:string">
+  <xs:annotation>
+    <xs:documentation>
+      surname
+    </xs:documentation>
+  </xs:annotation>
+</xs:element>
+
+<xs:element name="sub" type="xs:string">
+  <xs:annotation>
+    <xs:documentation>
+      subscript
+    </xs:documentation>
+  </xs:annotation>
+</xs:element>
+
+<xs:element name="sup" type="xs:string">
+  <xs:annotation>
+    <xs:documentation>
+      superscript
+    </xs:documentation>
+  </xs:annotation>
+</xs:element>
+
+<xs:annotation>
+  <xs:documentation>
+    ================= Complex Elements =========================================
+  </xs:documentation>
+</xs:annotation>
+
+<xs:element name="attribution">
+  <xs:annotation>
+    <xs:documentation>
+      source attribution
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="authors">
+  <xs:annotation>
+    <xs:documentation>
+      sequence of personal names
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="person" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="backmatter">
+  <xs:annotation>
+    <xs:documentation>
+      afterward, appendix, epilogue, etc.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="attribution"/>
+      <xs:element ref="bibRef"/>
+      <xs:element ref="blockquote"/>
+      <xs:element ref="br"/>
+      <xs:element ref="div"/>
+      <xs:element ref="p"/>
+      <xs:element ref="pageBreak"/>
+      <xs:group ref="listElements"/>
+    </xs:choice>
+    <xs:attribute ref="label"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="bibRef">
+  <xs:annotation>
+    <xs:documentation>
+      document title
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="blockquote">
+  <xs:annotation>
+    <xs:documentation>
+      paragraph with narrow margins
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="p"/>
+      <xs:element ref="pageBreak"/>
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="indent"/>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="body">
+  <xs:annotation>
+    <xs:documentation>
+      document body
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="attribution"/>
+      <xs:element ref="blockquote"/>
+      <xs:element ref="div"/>
+      <xs:element ref="p"/>
+      <xs:element ref="pageBreak"/>
+      <xs:group ref="listElements"/>
+      <xs:group ref="sectionElements"/>
+    </xs:choice>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="chapter">
+  <xs:annotation>
+    <xs:documentation>
+      level two section title
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="number"/>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="contact">
+  <xs:annotation>
+    <xs:documentation>
+      contact information
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="footnote">
+  <xs:annotation>
+    <xs:documentation>
+      footnote
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="p"/>
+      <xs:group ref="textElements"/>
+    </xs:choice>
+    <xs:attribute ref="label"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="frontmatter">
+  <xs:annotation>
+    <xs:documentation>
+      forward, introduction, preface, etc.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="attribution"/>
+      <xs:element ref="blockquote"/>
+      <xs:element ref="div"/>
+      <xs:element ref="p"/>
+      <xs:element ref="pageBreak"/>
+      <xs:group ref="listElements"/>
+    </xs:choice>
+    <xs:attribute ref="label"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="head">
+  <xs:annotation>
+    <xs:documentation>
+      document header
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="title"/>
+      <xs:element ref="subtitle" minOccurs="0"/>
+      <xs:element ref="authors"/>
+      <xs:element ref="contact" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="li">
+  <xs:annotation>
+    <xs:documentation>
+      list item
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:element ref="p"/>
+      <xs:element ref="pageBreak"/>
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="number"/>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="manuscript">
+  <xs:annotation>
+    <xs:documentation>
+      document root
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="head"/>
+      <xs:element ref="frontmatter" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="body"/>
+      <xs:element ref="backmatter" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="firstPage"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="noteRef">
+  <xs:annotation>
+    <xs:documentation>
+      note reference
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:attribute ref="label"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="ol">
+  <xs:annotation>
+    <xs:documentation>
+      ordered list
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="li" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="startNo"/>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="p">
+  <xs:annotation>
+    <xs:documentation>
+      paragraph
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="indent"/>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="part">
+  <xs:annotation>
+    <xs:documentation>
+      level one section title
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="number"/>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="person">
+  <xs:annotation>
+    <xs:documentation>
+      personal name
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="prefix" minOccurs="0"/>
+      <xs:element ref="gn" minOccurs="0" maxOccurs="3"/>
+      <xs:element ref="sn"/>
+      <xs:element ref="suffix" minOccurs="0"/>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+	<xs:element ref="footnote"/>
+	<xs:element ref="noteRef"/>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute ref="firstPage"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="section">
+  <xs:annotation>
+    <xs:documentation>
+      level three section title
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="number"/>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="subtitle">
+  <xs:annotation>
+    <xs:documentation>
+      document subtitle
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="indent"/>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="suffix">
+  <xs:annotation>
+    <xs:documentation>
+      name suffix
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+	<xs:attribute ref="comma"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="title">
+  <xs:annotation>
+    <xs:documentation>
+      document title
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType mixed="true">
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+      <xs:group ref="textElements"/>
+      <xs:element ref="footnote"/>
+    </xs:choice>
+    <xs:attribute ref="indent"/>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="ul">
+  <xs:annotation>
+    <xs:documentation>
+      unordered list
+    </xs:documentation>
+  </xs:annotation>
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element ref="li" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute ref="lineSpacing"/>
+  </xs:complexType>
+</xs:element>
+
+<xs:annotation>
+  <xs:documentation>
+    ================= Groups ===================================================
+  </xs:documentation>
+</xs:annotation>
+
+<xs:group name="listElements">
+  <xs:choice>
+    <xs:element ref="ol"/>
+    <xs:element ref="ul"/>
+  </xs:choice>
+</xs:group>
+
+<xs:group name="sectionElements">
+  <xs:choice>
+    <xs:element ref="chapter"/>
+    <xs:element ref="part"/>
+    <xs:element ref="section"/>
+  </xs:choice>
+</xs:group>
+
+<xs:group name="textElements">
+  <xs:choice>
+    <xs:element ref="br"/>
+    <xs:element ref="em"/>
+    <xs:element ref="noteRef"/>
+    <xs:element ref="sub"/>
+    <xs:element ref="sup"/>
+  </xs:choice>
+</xs:group>
+
+</xs:schema>

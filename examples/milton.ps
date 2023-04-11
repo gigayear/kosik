@@ -1,0 +1,2018 @@
+%!PS
+%%Title: Areopagitica
+%%Creator: kosik
+%%DocumentFonts: Courier
+%%BoundingBox: 0 0 612 792
+%%Pages: 63
+%%EndComments
+%%BeginProcSet: textset 1.0 0
+% begin a new page
+/page-begin {
+  gsave
+} def
+% end the current page
+/page-end {
+  grestore
+  showpage
+} def
+% show underlined
+/ushow {
+  gsave
+    currentfont /FontInfo get /UnderlinePosition get 100 div
+    0 exch rmoveto                      % move to underline position
+    dup stringwidth pop 0 rlineto       % create underline
+    currentfont /FontInfo get /UnderlineThickness get 100 div
+    setlinewidth stroke                 % draw underline
+  grestore
+  show
+} bind def
+% reencode a small number of characters in a given font.
+/reencsmalldict 12 dict def
+/ReEncodeSmall {
+  reencsmalldict
+  begin
+    /newcodesandnames exch def
+    /newfontname exch def
+    /basefontname exch def
+    /basefontdict basefontname findfont def
+    /newfont basefontdict maxlength dict def
+    basefontdict
+    { exch dup /FID ne
+      { dup /Encoding eq
+        { exch dup length array copy
+          newfont 3 1 roll put }
+        { exch newfont 3 1 roll put }
+        ifelse
+      }
+      { pop pop }
+      ifelse
+    } forall
+    newfont /FontName newfontname put
+    newcodesandnames aload pop
+    newcodesandnames length 2 idiv
+    { newfont /Encoding get 3 1 roll put }
+    repeat
+    newfontname newfont definefont pop
+  end
+} def
+% generate a Latin-1 encoding for Courier
+/Courier findfont
+0 dict copy begin
+/Encoding ISOLatin1Encoding def
+/CourierLatin1 /FontName def
+currentdict end
+dup /FID undef
+/CourierLatin1 exch definefont pop
+% mapping from Latin-1 to Latin-9
+/scandvec [
+  8#244 /Euro
+  8#246 /Scaron
+  8#250 /scaron
+  8#264 /Zcaron
+  8#270 /zcaron
+  8#274 /OE
+  8#275 /oe
+  8#276 /Ydieresis
+] def
+% generate the Latin-9 encoding
+/CourierLatin1 /CourierLatin9 scandvec ReEncodeSmall
+% set the current font
+/CourierLatin9 findfont 12 scalefont setfont
+% set the character width
+/cw { gsave (m) stringwidth pop grestore } def
+% set the baselineskip
+/bs 12 def
+%%EndProcSet
+%%EndProlog
+%%Page: 1 1
+page-begin
+72 708 moveto (MATCHLOCK PRESS) show 72 696 moveto (P.O. Box 90606) show 72 684 moveto (Brooklyn, NY 11209) show 396 708 moveto (Approx. 18,000 words) show 259 480 moveto (Areopagitica) ushow 
+166 444 moveto (A Speech for the Liberty of Unlicensed) show 
+166 432 moveto (Printing to the Parliament of England) show 
+252 396 moveto (by John Milton) show 
+108 360 moveto (This is true liberty, when free-born men,) show 
+108 348 moveto (Having to advise the public, may speak free,) show 
+108 336 moveto (Which he who can, and will, deserves high praise;) show 
+108 324 moveto (Who neither can, nor will, may hold his peace:) show 
+108 312 moveto (What can be juster in a state than this?) show 
+410 288 moveto (--Euripid, ) show (Hicetid) ushow 
+72 264 moveto (     They, who to states and governors of the Commonwealth direct) show 
+72 240 moveto (their speech, High Court of Parliament, or, wanting such access) show 
+72 216 moveto (in a private condition, write that which they foresee may advance) show 
+72 192 moveto (the public good; I suppose them, as at the beginning of no mean) show 
+72 168 moveto (endeavour, not a little altered and moved inwardly in their) show 
+72 144 moveto (minds:  some with doubt of what will be the success, others with) show 
+72 120 moveto (fear of what will be the censure; some with hope, others with) show 
+72 96 moveto (confidence of what they have to speak.  And me perhaps each of) show 
+page-end
+%%Page: 2 2
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/2) show 
+72 708 moveto (these dispositions, as the subject was whereon I entered, may) show 
+72 684 moveto (have at other times variously affected; and likely might in these) show 
+72 660 moveto (foremost expressions now also disclose which of them swayed most,) show 
+72 636 moveto (but that the very attempt of this address thus made, and the) show 
+72 612 moveto (thought of whom it hath recourse to, hath got the power within me) show 
+72 588 moveto (to a passion, far more welcome than incidental to a preface.) show 
+72 564 moveto (     Which though I stay not to confess ere any ask, I shall be) show 
+72 540 moveto (blameless, if it be no other than the joy and gratulation which) show 
+72 516 moveto (it brings to all who wish and promote their country's liberty;) show 
+72 492 moveto (whereof this whole discourse proposed will be a certain) show 
+72 468 moveto (testimony, if not a trophy.  For this is not the liberty which we) show 
+72 444 moveto (can hope, that no grievance ever should arise in the) show 
+72 420 moveto (Commonwealth--that let no man in this world expect; but when) show 
+72 396 moveto (complaints are freely heard, deeply considered and speedily) show 
+72 372 moveto (reformed, then is the utmost bound of civil liberty attained that) show 
+72 348 moveto (wise men look for.  To which if I now manifest by the very sound) show 
+72 324 moveto (of this which I shall utter, that we are already in good part) show 
+72 300 moveto (arrived, and yet from such a steep disadvantage of tyranny and) show 
+72 276 moveto (superstition grounded into our principles as was beyond the) show 
+72 252 moveto (manhood of a Roman recovery, it will be attributed first, as is) show 
+72 228 moveto (most due, to the strong assistance of God our deliverer, next to) show 
+72 204 moveto (your faithful guidance and undaunted wisdom, Lords and Commons of) show 
+72 180 moveto (England.  Neither is it in God's esteem the diminution of his) show 
+72 156 moveto (glory, when honourable things are spoken of good men and worthy) show 
+72 132 moveto (magistrates; which if I now first should begin to do, after so) show 
+72 108 moveto (fair a progress of your laudable deeds, and such a long) show 
+72 84 moveto (obligement upon the whole realm to your indefatigable virtues, I) show 
+page-end
+%%Page: 3 3
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/3) show 
+72 708 moveto (might be justly reckoned among the tardiest, and the unwillingest) show 
+72 684 moveto (of them that praise ye.) show 
+72 660 moveto (     Nevertheless there being three principal things, without) show 
+72 636 moveto (which all praising is but courtship and flattery:  First, when) show 
+72 612 moveto (that only is praised which is solidly worth praise:  next, when) show 
+72 588 moveto (greatest likelihoods are brought that such things are truly and) show 
+72 564 moveto (really in those persons to whom they are ascribed:  the other,) show 
+72 540 moveto (when he who praises, by showing that such his actual persuasion) show 
+72 516 moveto (is of whom he writes, can demonstrate that he flatters not; the) show 
+72 492 moveto (former two of these I have heretofore endeavoured, rescuing the) show 
+72 468 moveto (employment from him who went about to impair your merits with a) show 
+72 444 moveto (trivial and malignant encomium; the latter as belonging chiefly) show 
+72 420 moveto (to mine own acquittal, that whom I so extolled I did not flatter,) show 
+72 396 moveto (hath been reserved opportunely to this occasion.) show 
+72 372 moveto (     For he who freely magnifies what hath been nobly done, and) show 
+72 348 moveto (fears not to declare as freely what might be done better, gives) show 
+72 324 moveto (ye the best covenant of his fidelity; and that his loyalest) show 
+72 300 moveto (affection and his hope waits on your proceedings.  His highest) show 
+72 276 moveto (praising is not flattery, and his plainest advice is a kind of) show 
+72 252 moveto (praising.  For though I should affirm and hold by argument, that) show 
+72 228 moveto (it would fare better with truth, with learning and the) show 
+72 204 moveto (Commonwealth, if one of your published Orders, which I should) show 
+72 180 moveto (name, were called in; yet at the same time it could not but much) show 
+72 156 moveto (redound to the lustre of your mild and equal government, whenas) show 
+72 132 moveto (private persons are hereby animated to think ye better pleased) show 
+72 108 moveto (with public advice, than other statists have been delighted) show 
+72 84 moveto (heretofore with public flattery.  And men will then see what) show 
+page-end
+%%Page: 4 4
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/4) show 
+72 708 moveto (difference there is between the magnanimity of a triennial) show 
+72 684 moveto (Parliament, and that jealous haughtiness of prelates and cabin) show 
+72 660 moveto (counsellors that usurped of late, whenas they shall observe ye in) show 
+72 636 moveto (the midst of your victories and successes more gently brooking) show 
+72 612 moveto (written exceptions against a voted Order than other courts, which) show 
+72 588 moveto (had produced nothing worth memory but the weak ostentation of) show 
+72 564 moveto (wealth, would have endured the least signified dislike at any) show 
+72 540 moveto (sudden proclamation.) show 
+72 516 moveto (     If I should thus far presume upon the meek demeanour of your) show 
+72 492 moveto (civil and gentle greatness, Lords and Commons, as what your) show 
+72 468 moveto (published Order hath directly said, that to gainsay, I might) show 
+72 444 moveto (defend myself with ease, if any should accuse me of being new or) show 
+72 420 moveto (insolent, did they but know how much better I find ye esteem it) show 
+72 396 moveto (to imitate the old and elegant humanity of Greece, than the) show 
+72 372 moveto (barbaric pride of a Hunnish and Norwegian stateliness.  And out) show 
+72 348 moveto (of those ages, to whose polite wisdom and letters we owe that we) show 
+72 324 moveto (are not yet Goths and Jutlanders, I could name him who from his) show 
+72 300 moveto (private house wrote that discourse to the Parliament of Athens,) show 
+72 276 moveto (that persuades them to change the form of democracy which was) show 
+72 252 moveto (then established.  Such honour was done in those days to men who) show 
+72 228 moveto (professed the study of wisdom and eloquence, not only in their) show 
+72 204 moveto (own country, but in other lands, that cities and signiories heard) show 
+72 180 moveto (them gladly, and with great respect, if they had aught in public) show 
+72 156 moveto (to admonish the state.  Thus did Dion Prusaeus, a stranger and a) show 
+72 132 moveto (private orator, counsel the Rhodians against a former edict; and) show 
+72 108 moveto (I abound with other like examples, which to set here would be) show 
+72 84 moveto (superfluous.) show 
+page-end
+%%Page: 5 5
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/5) show 
+72 708 moveto (     But if from the industry of a life wholly dedicated to) show 
+72 684 moveto (studious labours, and those natural endowments haply not the) show 
+72 660 moveto (worst for two and fifty degrees of northern latitude, so much) show 
+72 636 moveto (must be derogated, as to count me not equal to any of those who) show 
+72 612 moveto (had this privilege, I would obtain to be thought not so inferior,) show 
+72 588 moveto (as yourselves are superior to the most of them who received their) show 
+72 564 moveto (counsel:  and how far you excel them, be assured, Lords and) show 
+72 540 moveto (Commons, there can no greater testimony appear, than when your) show 
+72 516 moveto (prudent spirit acknowledges and obeys the voice of reason from) show 
+72 492 moveto (what quarter soever it be heard speaking; and renders ye as) show 
+72 468 moveto (willing to repeal any Act of your own setting forth, as any set) show 
+72 444 moveto (forth by your predecessors.) show 
+72 420 moveto (     If ye be thus resolved, as it were injury to think ye were) show 
+72 396 moveto (not, I know not what should withhold me from presenting ye with a) show 
+72 372 moveto (fit instance wherein to show both that love of truth which ye) show 
+72 348 moveto (eminently profess, and that uprightness of your judgment which is) show 
+72 324 moveto (not wont to be partial to yourselves; by judging over again that) show 
+72 300 moveto (Order which ye have ordained to regulate printing:--that no book,) show 
+72 276 moveto (pamphlet, or paper shall be henceforth printed, unless the same) show 
+72 252 moveto (be first approved and licensed by such, or at least one of such,) show 
+72 228 moveto (as shall be thereto appointed.  For that part which preserves) show 
+72 204 moveto (justly every man's copy to himself, or provides for the poor, I) show 
+72 180 moveto (touch not, only wish they be not made pretences to abuse and) show 
+72 156 moveto (persecute honest and painful men, who offend not in either of) show 
+72 132 moveto (these particulars.  But that other clause of licensing books,) show 
+72 108 moveto (which we thought had died with his brother quadragesimal and) show 
+72 84 moveto (matrimonial when the prelates expired, I shall now attend with) show 
+page-end
+%%Page: 6 6
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/6) show 
+72 708 moveto (such a homily, as shall lay before ye, first the inventors of it) show 
+72 684 moveto (to be those whom ye will be loath to own; next what is to be) show 
+72 660 moveto (thought in general of reading, whatever sort the books be; and) show 
+72 636 moveto (that this Order avails nothing to the suppressing of scandalous,) show 
+72 612 moveto (seditious, and libellous books, which were mainly intended to be) show 
+72 588 moveto (suppressed.  Last, that it will be primely to the discouragement) show 
+72 564 moveto (of all learning, and the stop of truth, not only by disexercising) show 
+72 540 moveto (and blunting our abilities in what we know already, but by) show 
+72 516 moveto (hindering and cropping the discovery that might be yet further) show 
+72 492 moveto (made both in religious and civil wisdom.) show 
+72 468 moveto (     I deny not, but that it is of greatest concernment in the) show 
+72 444 moveto (Church and Commonwealth, to have a vigilant eye how books demean) show 
+72 420 moveto (themselves as well as men; and thereafter to confine, imprison,) show 
+72 396 moveto (and do sharpest justice on them as malefactors.  For books are) show 
+72 372 moveto (not absolutely dead things, but do contain a potency of life in) show 
+72 348 moveto (them to be as active as that soul was whose progeny they are;) show 
+72 324 moveto (nay, they do preserve as in a vial the purest efficacy and) show 
+72 300 moveto (extraction of that living intellect that bred them.  I know they) show 
+72 276 moveto (are as lively, and as vigorously productive, as those fabulous) show 
+72 252 moveto (dragon's teeth; and being sown up and down, may chance to spring) show 
+72 228 moveto (up armed men.  And yet, on the other hand, unless wariness be) show 
+72 204 moveto (used, as good almost kill a man as kill a good book.  Who kills a) show 
+72 180 moveto (man kills a reasonable creature, God's image; but he who destroys) show 
+72 156 moveto (a good book, kills reason itself, kills the image of God, as it) show 
+72 132 moveto (were in the eye.  Many a man lives a burden to the earth; but a) show 
+72 108 moveto (good book is the precious life-blood of a master spirit, embalmed) show 
+72 84 moveto (and treasured up on purpose to a life beyond life.  'Tis true, no) show 
+page-end
+%%Page: 7 7
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/7) show 
+72 708 moveto (age can restore a life, whereof perhaps there is no great loss;) show 
+72 684 moveto (and revolutions of ages do not oft recover the loss of a rejected) show 
+72 660 moveto (truth, for the want of which whole nations fare the worse.) show 
+72 636 moveto (     We should be wary therefore what persecution we raise) show 
+72 612 moveto (against the living labours of public men, how we spill that) show 
+72 588 moveto (seasoned life of man, preserved and stored up in books; since we) show 
+72 564 moveto (see a kind of homicide may be thus committed, sometimes a) show 
+72 540 moveto (martyrdom, and if it extend to the whole impression, a kind of) show 
+72 516 moveto (massacre; whereof the execution ends not in the slaying of an) show 
+72 492 moveto (elemental life, but strikes at that ethereal and fifth essence,) show 
+72 468 moveto (the breath of reason itself, slays an immortality rather than a) show 
+72 444 moveto (life.  But lest I should be condemned of introducing license,) show 
+72 420 moveto (while I oppose licensing, I refuse not the pains to be so much) show 
+72 396 moveto (historical, as will serve to show what hath been done by ancient) show 
+72 372 moveto (and famous commonwealths against this disorder, till the very) show 
+72 348 moveto (time that this project of licensing crept out of the Inquisition,) show 
+72 324 moveto (was catched up by our prelates, and hath caught some of our) show 
+72 300 moveto (presbyters.) show 
+72 276 moveto (     In Athens, where books and wits were ever busier than in any) show 
+72 252 moveto (other part of Greece, I find but only two sorts of writings which) show 
+72 228 moveto (the magistrate cared to take notice of; those either blasphemous) show 
+72 204 moveto (and atheistical, or libellous.  Thus the books of Protagoras were) show 
+72 180 moveto (by the judges of Areopagus commanded to be burnt, and himself) show 
+72 156 moveto (banished the territory for a discourse begun with his confessing) show 
+72 132 moveto (not to know WHETHER THERE WERE GODS, OR WHETHER NOT.  And against) show 
+72 108 moveto (defaming, it was decreed that none should be traduced by name, as) show 
+72 84 moveto (was the manner of Vetus Comoedia, whereby we may guess how they) show 
+page-end
+%%Page: 8 8
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/8) show 
+72 708 moveto (censured libelling.  And this course was quick enough, as Cicero) show 
+72 684 moveto (writes, to quell both the desperate wits of other atheists, and) show 
+72 660 moveto (the open way of defaming, as the event showed.  Of other sects) show 
+72 636 moveto (and opinions, though tending to voluptuousness, and the denying) show 
+72 612 moveto (of divine Providence, they took no heed.) show 
+72 588 moveto (     Therefore we do not read that either Epicurus, or that) show 
+72 564 moveto (libertine school of Cyrene, or what the Cynic impudence uttered,) show 
+72 540 moveto (was ever questioned by the laws.  Neither is it recorded that the) show 
+72 516 moveto (writings of those old comedians were suppressed, though the) show 
+72 492 moveto (acting of them were forbid; and that Plato commended the reading) show 
+72 468 moveto (of Aristophanes, the loosest of them all, to his royal scholar) show 
+72 444 moveto (Dionysius, is commonly known, and may be excused, if holy) show 
+72 420 moveto (Chrysostom, as is reported, nightly studied so much the same) show 
+72 396 moveto (author and had the art to cleanse a scurrilous vehemence into the) show 
+72 372 moveto (style of a rousing sermon.) show 
+72 348 moveto (     That other leading city of Greece, Lacedaemon, considering) show 
+72 324 moveto (that Lycurgus their lawgiver was so addicted to elegant learning,) show 
+72 300 moveto (as to have been the first that brought out of Ionia the scattered) show 
+72 276 moveto (works of Homer, and sent the poet Thales from Crete to prepare) show 
+72 252 moveto (and mollify the Spartan surliness with his smooth songs and odes,) show 
+72 228 moveto (the better to plant among them law and civility, it is to be) show 
+72 204 moveto (wondered how museless and unbookish they were, minding nought but) show 
+72 180 moveto (the feats of war.  There needed no licensing of books among them,) show 
+72 156 moveto (for they disliked all but their own laconic apophthegms, and took) show 
+72 132 moveto (a slight occasion to chase Archilochus out of their city, perhaps) show 
+72 108 moveto (for composing in a higher strain than their own soldierly ballads) show 
+72 84 moveto (and roundels could reach to.  Or if it were for his broad verses,) show 
+page-end
+%%Page: 9 9
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/9) show 
+72 708 moveto (they were not therein so cautious but they were as dissolute in) show 
+72 684 moveto (their promiscuous conversing; whence Euripides affirms in) show 
+72 660 moveto (Andromache, that their women were all unchaste.  Thus much may) show 
+72 636 moveto (give us light after what sort of books were prohibited among the) show 
+72 612 moveto (Greeks.) show 
+72 588 moveto (     The Romans also, for many ages trained up only to a military) show 
+72 564 moveto (roughness resembling most the Lacedaemonian guise, knew of) show 
+72 540 moveto (learning little but what their twelve Tables, and the Pontific) show 
+72 516 moveto (College with their augurs and flamens taught them in religion and) show 
+72 492 moveto (law; so unacquainted with other learning, that when Carneades and) show 
+72 468 moveto (Critolaus, with the Stoic Diogenes, coming ambassadors to Rome,) show 
+72 444 moveto (took thereby occasion to give the city a taste of their) show 
+72 420 moveto (philosophy, they were suspected for seducers by no less a man) show 
+72 396 moveto (than Cato the Censor, who moved it in the Senate to dismiss them) show 
+72 372 moveto (speedily, and to banish all such Attic babblers out of Italy.  But) show 
+72 348 moveto (Scipio and others of the noblest senators withstood him and his) show 
+72 324 moveto (old Sabine austerity; honoured and admired the men; and the) show 
+72 300 moveto (censor himself at last, in his old age, fell to the study of that) show 
+72 276 moveto (whereof before he was so scrupulous.  And yet at the same time) show 
+72 252 moveto (Naevius and Plautus, the first Latin comedians, had filled the) show 
+72 228 moveto (city with all the borrowed scenes of Menander and Philemon.  Then) show 
+72 204 moveto (began to be considered there also what was to be done to) show 
+72 180 moveto (libellous books and authors; for Naevius was quickly cast into) show 
+72 156 moveto (prison for his unbridled pen, and released by the tribunes upon) show 
+72 132 moveto (his recantation; we read also that libels were burnt, and the) show 
+72 108 moveto (makers punished by Augustus.  The like severity, no doubt, was) show 
+72 84 moveto (used, if aught were impiously written against their esteemed) show 
+page-end
+%%Page: 10 10
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/10) show 
+72 708 moveto (gods.  Except in these two points, how the world went in books,) show 
+72 684 moveto (the magistrate kept no reckoning.) show 
+72 660 moveto (     And therefore Lucretius without impeachment versifies his) show 
+72 636 moveto (Epicurism to Memmius, and had the honour to be set forth the) show 
+72 612 moveto (second time by Cicero, so great a father of the Commonwealth;) show 
+72 588 moveto (although himself disputes against that opinion in his own) show 
+72 564 moveto (writings.  Nor was the satirical sharpness or naked plainness of) show 
+72 540 moveto (Lucilius, or Catullus, or Flaccus, by any order prohibited.  And) show 
+72 516 moveto (for matters of state, the story of Titus Livius, though it) show 
+72 492 moveto (extolled that part which Pompey held, was not therefore) show 
+72 468 moveto (suppressed by Octavius Caesar of the other faction.  But that) show 
+72 444 moveto (Naso was by him banished in his old age, for the wanton poems of) show 
+72 420 moveto (his youth, was but a mere covert of state over some secret cause:) show 
+72 396 moveto (and besides, the books were neither banished nor called in.  From) show 
+72 372 moveto (hence we shall meet with little else but tyranny in the Roman) show 
+72 348 moveto (empire, that we may not marvel, if not so often bad as good books) show 
+72 324 moveto (were silenced.  I shall therefore deem to have been large enough,) show 
+72 300 moveto (in producing what among the ancients was punishable to write;) show 
+72 276 moveto (save only which, all other arguments were free to treat on.) show 
+72 252 moveto (     By this time the emperors were become Christians, whose) show 
+72 228 moveto (discipline in this point I do not find to have been more severe) show 
+72 204 moveto (than what was formerly in practice.  The books of those whom they) show 
+72 180 moveto (took to be grand heretics were examined, refuted, and condemned) show 
+72 156 moveto (in the general Councils; and not till then were prohibited, or) show 
+72 132 moveto (burnt, by authority of the emperor.  As for the writings of) show 
+72 108 moveto (heathen authors, unless they were plain invectives against) show 
+72 84 moveto (Christianity, as those of Porphyrius and Proclus, they met with) show 
+page-end
+%%Page: 11 11
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/11) show 
+72 708 moveto (no interdict that can be cited, till about the year 400, in a) show 
+72 684 moveto (Carthaginian Council, wherein bishops themselves were forbid to) show 
+72 660 moveto (read the books of Gentiles, but heresies they might read:  while) show 
+72 636 moveto (others long before them, on the contrary, scrupled more the books) show 
+72 612 moveto (of heretics than of Gentiles.  And that the primitive Councils) show 
+72 588 moveto (and bishops were wont only to declare what books were not) show 
+72 564 moveto (commendable, passing no further, but leaving it to each one's) show 
+72 540 moveto (conscience to read or to lay by, till after the year 800, is) show 
+72 516 moveto (observed already by Padre Paolo, the great unmasker of the) show 
+72 492 moveto (Trentine Council.) show 
+72 468 moveto (     After which time the Popes of Rome, engrossing what they) show 
+72 444 moveto (pleased of political rule into their own hands, extended their) show 
+72 420 moveto (dominion over men's eyes, as they had before over their) show 
+72 396 moveto (judgments, burning and prohibiting to be read what they fancied) show 
+72 372 moveto (not; yet sparing in their censures, and the books not many which) show 
+72 348 moveto (they so dealt with:  till Martin V., by his bull, not only) show 
+72 324 moveto (prohibited, but was the first that excommunicated the reading of) show 
+72 300 moveto (heretical books; for about that time Wickliffe and Huss, growing) show 
+72 276 moveto (terrible, were they who first drove the Papal Court to a stricter) show 
+72 252 moveto (policy of prohibiting.  Which course Leo X.  and his successors) show 
+72 228 moveto (followed, until the Council of Trent and the Spanish Inquisition) show 
+72 204 moveto (engendering together brought forth, or perfected, those) show 
+72 180 moveto (Catalogues and expurging Indexes, that rake through the entrails) show 
+72 156 moveto (of many an old good author, with a violation worse than any could) show 
+72 132 moveto (be offered to his tomb.  Nor did they stay in matters heretical,) show 
+72 108 moveto (but any subject that was not to their palate, they either) show 
+72 84 moveto (condemned in a Prohibition, or had it straight into the new) show 
+page-end
+%%Page: 12 12
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/12) show 
+72 708 moveto (purgatory of an index.) show 
+72 684 moveto (     To fill up the measure of encroachment, their last invention) show 
+72 660 moveto (was to ordain that no book, pamphlet, or paper should be printed) show 
+72 636 moveto (\(as if St. Peter had bequeathed them the keys of the press also) show 
+72 612 moveto (out of Paradise\) unless it were approved and licensed under the) show 
+72 588 moveto (hands of two or three glutton friars.  For example:) show 
+108 564 moveto (Let the Chancellor Cini be pleased to see if in this) show 
+108 552 moveto (present work be contained aught that may withstand the) show 
+108 540 moveto (printing.) show 
+274 516 moveto (--Vincent Rabbatta, Vicar of Florence) show 
+108 492 moveto (I have seen this present work, and find nothing athwart) show 
+108 480 moveto (the Catholic faith and good manners:  in witness) show 
+108 468 moveto (whereof I have given, etc.) show 
+274 444 moveto (--Nicola Gini, Chancellor of Florence) show 
+108 420 moveto (Attending the precedent relation, it is allowed that) show 
+108 408 moveto (this present work of Davanzati may be printed.) show 
+367 384 moveto (--Vincent Rabbatta, etc.) show 
+108 360 moveto (It may be printed, July 15.) show 
+324 336 moveto (--Friar Simon Mompei D'Amelia,) show 
+245 324 moveto (Chancellor of the Holy Office in Florence) show 
+72 300 moveto (Sure they have a conceit, if he of the bottomless pit had not) show 
+72 276 moveto (long since broke prison, that this quadruple exorcism would bar) show 
+72 252 moveto (him down.  I fear their next design will be to get into their) show 
+72 228 moveto (custody the licensing of that which they say Claudius intended,) show 
+72 204 moveto (but went not through with.  Vouchsafe to see another of their) show 
+72 180 moveto (forms, the Roman stamp:) show 
+72 156 moveto () show 
+72 144 moveto () show 
+72 132 moveto () show 
+108 120 moveto (Imprimatur, If it seem good to the reverend Master of) show 
+108 108 moveto (the Holy Palace.) show 
+374 84 moveto (--Belcastro, Vicegerent) show 
+page-end
+%%Page: 13 13
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/13) show 
+108 708 moveto (Imprimatur,) show 
+367 684 moveto (--Friar Nicolo Rodolphi,) show 
+360 672 moveto (Master of the Holy Palace) show 
+72 648 moveto (     Sometimes five Imprimaturs are seen together dialogue-wise) show 
+72 624 moveto (in the piazza of one title-page, complimenting and ducking each) show 
+72 600 moveto (to other with their shaven reverences, whether the author, who) show 
+72 576 moveto (stands by in perplexity at the foot of his epistle, shall to the) show 
+72 552 moveto (press or to the sponge.  These are the pretty responsories, these) show 
+72 528 moveto (are the dear antiphonies, that so bewitched of late our prelates) show 
+72 504 moveto (and their chaplains with the goodly echo they made; and besotted) show 
+72 480 moveto (us to the gay imitation of a lordly Imprimatur, one from Lambeth) show 
+72 456 moveto (House, another from the west end of Paul's; so apishly) show 
+72 432 moveto (Romanizing, that the word of command still was set down in Latin;) show 
+72 408 moveto (as if the learned grammatical pen that wrote it would cast no ink) show 
+72 384 moveto (without Latin; or perhaps, as they thought, because no vulgar) show 
+72 360 moveto (tongue was worthy to express the pure conceit of an Imprimatur,) show 
+72 336 moveto (but rather, as I hope, for that our English, the language of men) show 
+72 312 moveto (ever famous and foremost in the achievements of liberty, will not) show 
+72 288 moveto (easily find servile letters enow to spell such a dictatory) show 
+72 264 moveto (presumption English.) show 
+72 240 moveto (     And thus ye have the inventors and the original of book-) show 
+72 216 moveto (licensing ripped up and drawn as lineally as any pedigree.  We) show 
+72 192 moveto (have it not, that can be heard of, from any ancient state, or) show 
+72 168 moveto (polity or church; nor by any statute left us by our ancestors) show 
+72 144 moveto (elder or later; nor from the modern custom of any reformed city) show 
+72 120 moveto (or church abroad, but from the most anti-christian council and) show 
+72 96 moveto (the most tyrannous inquisition that ever inquired.  Till then) show 
+page-end
+%%Page: 14 14
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/14) show 
+72 708 moveto (books were ever as freely admitted into the world as any other) show 
+72 684 moveto (birth; the issue of the brain was no more stifled than the issue) show 
+72 660 moveto (of the womb:  no envious Juno sat cross-legged over the nativity) show 
+72 636 moveto (of any man's intellectual offspring; but if it proved a monster,) show 
+72 612 moveto (who denies, but that it was justly burnt, or sunk into the sea?) show 
+72 588 moveto (But that a book, in worse condition than a peccant soul, should) show 
+72 564 moveto (be to stand before a jury ere it be born to the world, and) show 
+72 540 moveto (undergo yet in darkness the judgment of Radamanth and his) show 
+72 516 moveto (colleagues, ere it can pass the ferry backward into light, was) show 
+72 492 moveto (never heard before, till that mysterious iniquity, provoked and) show 
+72 468 moveto (troubled at the first entrance of Reformation, sought out new) show 
+72 444 moveto (limbos and new hells wherein they might include our books also) show 
+72 420 moveto (within the number of their damned.  And this was the rare morsel) show 
+72 396 moveto (so officiously snatched up, and so ill-favouredly imitated by our) show 
+72 372 moveto (inquisiturient bishops, and the attendant minorites their) show 
+72 348 moveto (chaplains.  That ye like not now these most certain authors of) show 
+72 324 moveto (this licensing order, and that all sinister intention was far) show 
+72 300 moveto (distant from your thoughts, when ye were importuned the passing) show 
+72 276 moveto (it, all men who know the integrity of your actions, and how ye) show 
+72 252 moveto (honour truth, will clear ye readily.) show 
+72 228 moveto (     But some will say, what though the inventors were bad, the) show 
+72 204 moveto (thing for all that may be good?  It may so; yet if that thing be) show 
+72 180 moveto (no such deep invention, but obvious, and easy for any man to) show 
+72 156 moveto (light on, and yet best and wisest commonwealths through all ages) show 
+72 132 moveto (and occasions have forborne to use it, and falsest seducers and) show 
+72 108 moveto (oppressors of men were the first who took it up, and to no other) show 
+72 84 moveto (purpose but to obstruct and hinder the first approach of) show 
+page-end
+%%Page: 15 15
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/15) show 
+72 708 moveto (Reformation; I am of those who believe it will be a harder) show 
+72 684 moveto (alchemy than Lullius ever knew, to sublimate any good use out of) show 
+72 660 moveto (such an invention.  Yet this only is what I request to gain from) show 
+72 636 moveto (this reason, that it may be held a dangerous and suspicious) show 
+72 612 moveto (fruit, as certainly it deserves, for the tree that bore it, until) show 
+72 588 moveto (I can dissect one by one the properties it has.  But I have first) show 
+72 564 moveto (to finish, as was propounded, what is to be thought in general of) show 
+72 540 moveto (reading books, whatever sort they be, and whether be more the) show 
+72 516 moveto (benefit or the harm that thence proceeds.) show 
+72 492 moveto (     Not to insist upon the examples of Moses, Daniel, and Paul,) show 
+72 468 moveto (who were skilful in all the learning of the Egyptians, Chaldeans,) show 
+72 444 moveto (and Greeks, which could not probably be without reading their) show 
+72 420 moveto (books of all sorts; in Paul especially, who thought it no) show 
+72 396 moveto (defilement to insert into Holy Scripture the sentences of three) show 
+72 372 moveto (Greek poets, and one of them a tragedian; the question was) show 
+72 348 moveto (notwithstanding sometimes controverted among the primitive) show 
+72 324 moveto (doctors, but with great odds on that side which affirmed it both) show 
+72 300 moveto (lawful and profitable; as was then evidently perceived, when) show 
+72 276 moveto (Julian the Apostate and subtlest enemy to our faith made a decree) show 
+72 252 moveto (forbidding Christians the study of heathen learning:  for, said) show 
+72 228 moveto (he, they wound us with our own weapons, and with our own arts and) show 
+72 204 moveto (sciences they overcome us.  And indeed the Christians were put so) show 
+72 180 moveto (to their shifts by this crafty means, and so much in danger to) show 
+72 156 moveto (decline into all ignorance, that the two Apollinarii were fain,) show 
+72 132 moveto (as a man may say, to coin all the seven liberal sciences out of) show 
+72 108 moveto (the Bible, reducing it into divers forms of orations, poems,) show 
+72 84 moveto (dialogues, even to the calculating of a new Christian grammar.) show 
+page-end
+%%Page: 16 16
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/16) show 
+72 708 moveto (But, saith the historian Socrates, the providence of God provided) show 
+72 684 moveto (better than the industry of Apollinarius and his son, by taking) show 
+72 660 moveto (away that illiterate law with the life of him who devised it.  So) show 
+72 636 moveto (great an injury they then held it to be deprived of Hellenic) show 
+72 612 moveto (learning; and thought it a persecution more undermining, and) show 
+72 588 moveto (secretly decaying the Church, than the open cruelty of Decius or) show 
+72 564 moveto (Diocletian.) show 
+72 540 moveto (     And perhaps it was the same politic drift that the devil) show 
+72 516 moveto (whipped St. Jerome in a lenten dream, for reading Cicero; or else) show 
+72 492 moveto (it was a phantasm bred by the fever which had then seized him.) show 
+72 468 moveto (For had an angel been his discipliner, unless it were for) show 
+72 444 moveto (dwelling too much upon Ciceronianisms, and had chastised the) show 
+72 420 moveto (reading, not the vanity, it had been plainly partial; first to) show 
+72 396 moveto (correct him for grave Cicero, and not for scurril Plautus, whom) show 
+72 372 moveto (he confesses to have been reading, not long before; next to) show 
+72 348 moveto (correct him only, and let so many more ancient fathers wax old in) show 
+72 324 moveto (those pleasant and florid studies without the lash of such a) show 
+72 300 moveto (tutoring apparition; insomuch that Basil teaches how some good) show 
+72 276 moveto (use may be made of Margites, a sportful poem, not now extant,) show 
+72 252 moveto (writ by Homer; and why not then of Morgante, an Italian romance) show 
+72 228 moveto (much to the same purpose?) show 
+72 204 moveto (     But if it be agreed we shall be tried by visions, there is a) show 
+72 180 moveto (vision recorded by Eusebius, far ancienter than this tale of) show 
+72 156 moveto (Jerome, to the nun Eustochium, and, besides, has nothing of a) show 
+72 132 moveto (fever in it.  Dionysius Alexandrinus was about the year 240 a) show 
+72 108 moveto (person of great name in the Church for piety and learning, who) show 
+72 84 moveto (had wont to avail himself much against heretics by being) show 
+page-end
+%%Page: 17 17
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/17) show 
+72 708 moveto (conversant in their books; until a certain presbyter laid it) show 
+72 684 moveto (scrupulously to his conscience, how he durst venture himself) show 
+72 660 moveto (among those defiling volumes.  The worthy man, loath to give) show 
+72 636 moveto (offence, fell into a new debate with himself what was to be) show 
+72 612 moveto (thought; when suddenly a vision sent from God \(it is his own) show 
+72 588 moveto (epistle that so avers it\) confirmed him in these words:  READ ANY) show 
+72 564 moveto (BOOKS WHATEVER COME TO THY HANDS, FOR THOU ART SUFFICIENT BOTH TO) show 
+72 540 moveto (JUDGE ARIGHT AND TO EXAMINE EACH MATTER.  To this revelation he) show 
+72 516 moveto (assented the sooner, as he confesses, because it was answerable) show 
+72 492 moveto (to that of the Apostle to the Thessalonians, PROVE ALL THINGS,) show 
+72 468 moveto (HOLD FAST THAT WHICH IS GOOD.  And he might have added another) show 
+72 444 moveto (remarkable saying of the same author:  TO THE PURE, ALL THINGS) show 
+72 420 moveto (ARE PURE; not only meats and drinks, but all kind of knowledge) show 
+72 396 moveto (whether of good or evil; the knowledge cannot defile, nor) show 
+72 372 moveto (consequently the books, if the will and conscience be not) show 
+72 348 moveto (defiled.) show 
+72 324 moveto (     For books are as meats and viands are; some of good, some of) show 
+72 300 moveto (evil substance; and yet God, in that unapocryphal vision, said) show 
+72 276 moveto (without exception, RISE, PETER, KILL AND EAT, leaving the choice) show 
+72 252 moveto (to each man's discretion.  Wholesome meats to a vitiated stomach) show 
+72 228 moveto (differ little or nothing from unwholesome; and best books to a) show 
+72 204 moveto (naughty mind are not unappliable to occasions of evil.  Bad meats) show 
+72 180 moveto (will scarce breed good nourishment in the healthiest concoction;) show 
+72 156 moveto (but herein the difference is of bad books, that they to a) show 
+72 132 moveto (discreet and judicious reader serve in many respects to discover,) show 
+72 108 moveto (to confute, to forewarn, and to illustrate.  Whereof what better) show 
+72 84 moveto (witness can ye expect I should produce, than one of your own now) show 
+page-end
+%%Page: 18 18
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/18) show 
+72 708 moveto (sitting in Parliament, the chief of learned men reputed in this) show 
+72 684 moveto (land, Mr.  Selden; whose volume of natural and national laws) show 
+72 660 moveto (proves, not only by great authorities brought together, but by) show 
+72 636 moveto (exquisite reasons and theorems almost mathematically) show 
+72 612 moveto (demonstrative, that all opinions, yea errors, known, read, and) show 
+72 588 moveto (collated, are of main service and assistance toward the speedy) show 
+72 564 moveto (attainment of what is truest.  I conceive, therefore, that when) show 
+72 540 moveto (God did enlarge the universal diet of man's body, saving ever the) show 
+72 516 moveto (rules of temperance, he then also, as before, left arbitrary the) show 
+72 492 moveto (dieting and repasting of our minds; as wherein every mature man) show 
+72 468 moveto (might have to exercise his own leading capacity.) show 
+72 444 moveto (     How great a virtue is temperance, how much of moment through) show 
+72 420 moveto (the whole life of man!  Yet God commits the managing so great a) show 
+72 396 moveto (trust, without particular law or prescription, wholly to the) show 
+72 372 moveto (demeanour of every grown man.  And therefore when he himself) show 
+72 348 moveto (tabled the Jews from heaven, that omer, which was every man's) show 
+72 324 moveto (daily portion of manna, is computed to have been more than might) show 
+72 300 moveto (have well sufficed the heartiest feeder thrice as many meals.  For) show 
+72 276 moveto (those actions which enter into a man, rather than issue out of) show 
+72 252 moveto (him, and therefore defile not, God uses not to captivate under a) show 
+72 228 moveto (perpetual childhood of prescription, but trusts him with the gift) show 
+72 204 moveto (of reason to be his own chooser; there were but little work left) show 
+72 180 moveto (for preaching, if law and compulsion should grow so fast upon) show 
+72 156 moveto (those things which heretofore were governed only by exhortation.) show 
+72 132 moveto (Solomon informs us, that much reading is a weariness to the) show 
+72 108 moveto (flesh; but neither he nor other inspired author tells us that) show 
+72 84 moveto (such or such reading is unlawful:  yet certainly had God thought) show 
+page-end
+%%Page: 19 19
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/19) show 
+72 708 moveto (good to limit us herein, it had been much more expedient to have) show 
+72 684 moveto (told us what was unlawful than what was wearisome.  As for the) show 
+72 660 moveto (burning of those Ephesian books by St. Paul's converts; 'tis) show 
+72 636 moveto (replied the books were magic, the Syriac so renders them.  It was) show 
+72 612 moveto (a private act, a voluntary act, and leaves us to a voluntary) show 
+72 588 moveto (imitation:  the men in remorse burnt those books which were their) show 
+72 564 moveto (own; the magistrate by this example is not appointed; these men) show 
+72 540 moveto (practised the books, another might perhaps have read them in some) show 
+72 516 moveto (sort usefully.) show 
+72 492 moveto (     Good and evil we know in the field of this world grow up) show 
+72 468 moveto (together almost inseparably; and the knowledge of good is so) show 
+72 444 moveto (involved and interwoven with the knowledge of evil, and in so) show 
+72 420 moveto (many cunning resemblances hardly to be discerned, that those) show 
+72 396 moveto (confused seeds which were imposed upon Psyche as an incessant) show 
+72 372 moveto (labour to cull out, and sort asunder, were not more intermixed.) show 
+72 348 moveto (It was from out the rind of one apple tasted, that the knowledge) show 
+72 324 moveto (of good and evil, as two twins cleaving together, leaped forth) show 
+72 300 moveto (into the world.  And perhaps this is that doom which Adam fell) show 
+72 276 moveto (into of knowing good and evil, that is to say of knowing good by) show 
+72 252 moveto (evil.  As therefore the state of man now is; what wisdom can) show 
+72 228 moveto (there be to choose, what continence to forbear without the) show 
+72 204 moveto (knowledge of evil?  He that can apprehend and consider vice with) show 
+72 180 moveto (all her baits and seeming pleasures, and yet abstain, and yet) show 
+72 156 moveto (distinguish, and yet prefer that which is truly better, he is the) show 
+72 132 moveto (true warfaring Christian.) show 
+72 108 moveto (     I cannot praise a fugitive and cloistered virtue,) show 
+72 84 moveto (unexercised and unbreathed, that never sallies out and sees her) show 
+page-end
+%%Page: 20 20
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/20) show 
+72 708 moveto (adversary but slinks out of the race, where that immortal garland) show 
+72 684 moveto (is to be run for, not without dust and heat.  Assuredly we bring) show 
+72 660 moveto (not innocence into the world, we bring impurity much rather; that) show 
+72 636 moveto (which purifies us is trial, and trial is by what is contrary.) show 
+72 612 moveto (That virtue therefore which is but a youngling in the) show 
+72 588 moveto (contemplation of evil, and knows not the utmost that vice) show 
+72 564 moveto (promises to her followers, and rejects it, is but a blank virtue,) show 
+72 540 moveto (not a pure; her whiteness is but an excremental whiteness.  Which) show 
+72 516 moveto (was the reason why our sage and serious poet Spenser, whom I dare) show 
+72 492 moveto (be known to think a better teacher than Scotus or Aquinas,) show 
+72 468 moveto (describing true temperance under the person of Guion, brings him) show 
+72 444 moveto (in with his palmer through the cave of Mammon, and the bower of) show 
+72 420 moveto (earthly bliss, that he might see and know, and yet abstain.  Since) show 
+72 396 moveto (therefore the knowledge and survey of vice is in this world so) show 
+72 372 moveto (necessary to the constituting of human virtue, and the scanning) show 
+72 348 moveto (of error to the confirmation of truth, how can we more safely,) show 
+72 324 moveto (and with less danger, scout into the regions of sin and falsity) show 
+72 300 moveto (than by reading all manner of tractates and hearing all manner of) show 
+72 276 moveto (reason?  And this is the benefit which may be had of books) show 
+72 252 moveto (promiscuously read.) show 
+72 228 moveto (     But of the harm that may result hence three kinds are) show 
+72 204 moveto (usually reckoned.  First, is feared the infection that may) show 
+72 180 moveto (spread; but then all human learning and controversy in religious) show 
+72 156 moveto (points must remove out of the world, yea the Bible itself; for) show 
+72 132 moveto (that ofttimes relates blasphemy not nicely, it describes the) show 
+72 108 moveto (carnal sense of wicked men not unelegantly, it brings in holiest) show 
+72 84 moveto (men passionately murmuring against Providence through all the) show 
+page-end
+%%Page: 21 21
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/21) show 
+72 708 moveto (arguments of Epicurus:  in other great disputes it answers) show 
+72 684 moveto (dubiously and darkly to the common reader.  And ask a Talmudist) show 
+72 660 moveto (what ails the modesty of his marginal Keri, that Moses and all) show 
+72 636 moveto (the prophets cannot persuade him to pronounce the textual Chetiv.) show 
+72 612 moveto (For these causes we all know the Bible itself put by the Papist) show 
+72 588 moveto (must be next removed, as Clement of Alexandria, and that Eusebian) show 
+72 564 moveto (book of Evangelic preparation, transmitting our ears through a) show 
+72 540 moveto (hoard of heathenish obscenities to receive the Gospel.  Who finds) show 
+72 516 moveto (not that Irenaeus, Epiphanius, Jerome, and others discover more) show 
+72 492 moveto (heresies than they well confute, and that oft for heresy which is) show 
+72 468 moveto (the truer opinion?) show 
+72 444 moveto (     Nor boots it to say for these, and all the heathen writers) show 
+72 420 moveto (of greatest infection, if it must be thought so, with whom is) show 
+72 396 moveto (bound up the life of human learning, that they writ in an unknown) show 
+72 372 moveto (tongue, so long as we are sure those languages are known as well) show 
+72 348 moveto (to the worst of men, who are both most able and most diligent to) show 
+72 324 moveto (instil the poison they suck, first into the courts of princes,) show 
+72 300 moveto (acquainting them with the choicest delights and criticisms of) show 
+72 276 moveto (sin.  As perhaps did that Petronius whom Nero called his Arbiter,) show 
+72 252 moveto (the master of his revels; and the notorious ribald of Arezzo,) show 
+72 228 moveto (dreaded and yet dear to the Italian courtiers.  I name not him) show 
+72 204 moveto (for posterity's sake, whom Henry VIII.  named in merriment his) show 
+72 180 moveto (vicar of hell.  By which compendious way all the contagion that) show 
+72 156 moveto (foreign books can infuse will find a passage to the people far) show 
+72 132 moveto (easier and shorter than an Indian voyage, though it could be) show 
+72 108 moveto (sailed either by the north of Cataio eastward, or of Canada) show 
+72 84 moveto (westward, while our Spanish licensing gags the English press) show 
+page-end
+%%Page: 22 22
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/22) show 
+72 708 moveto (never so severely.) show 
+72 684 moveto (     But on the other side that infection which is from books of) show 
+72 660 moveto (controversy in religion is more doubtful and dangerous to the) show 
+72 636 moveto (learned than to the ignorant; and yet those books must be) show 
+72 612 moveto (permitted untouched by the licenser.  It will be hard to instance) show 
+72 588 moveto (where any ignorant man hath been ever seduced by papistical book) show 
+72 564 moveto (in English, unless it were commended and expounded to him by some) show 
+72 540 moveto (of that clergy:  and indeed all such tractates, whether false or) show 
+72 516 moveto (true, are as the prophecy of Isaiah was to the eunuch, not to be) show 
+72 492 moveto (UNDERSTOOD WITHOUT A GUIDE.  But of our priests and doctors how) show 
+72 468 moveto (many have been corrupted by studying the comments of Jesuits and) show 
+72 444 moveto (Sorbonists, and how fast they could transfuse that corruption) show 
+72 420 moveto (into the people, our experience is both late and sad.  It is not) show 
+72 396 moveto (forgot, since the acute and distinct Arminius was perverted) show 
+72 372 moveto (merely by the perusing of a nameless discourse written at Delft,) show 
+72 348 moveto (which at first he took in hand to confute.) show 
+72 324 moveto (     Seeing, therefore, that those books, and those in great) show 
+72 300 moveto (abundance, which are likeliest to taint both life and doctrine,) show 
+72 276 moveto (cannot be suppressed without the fall of learning and of all) show 
+72 252 moveto (ability in disputation, and that these books of either sort are) show 
+72 228 moveto (most and soonest catching to the learned, from whom to the common) show 
+72 204 moveto (people whatever is heretical or dissolute may quickly be) show 
+72 180 moveto (conveyed, and that evil manners are as perfectly learnt without) show 
+72 156 moveto (books a thousand other ways which cannot be stopped, and evil) show 
+72 132 moveto (doctrine not with books can propagate, except a teacher guide,) show 
+72 108 moveto (which he might also do without writing, and so beyond) show 
+72 84 moveto (prohibiting, I am not able to unfold, how this cautelous) show 
+page-end
+%%Page: 23 23
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/23) show 
+72 708 moveto (enterprise of licensing can be exempted from the number of vain) show 
+72 684 moveto (and impossible attempts.  And he who were pleasantly disposed) show 
+72 660 moveto (could not well avoid to liken it to the exploit of that gallant) show 
+72 636 moveto (man who thought to pound up the crows by shutting his park gate.) show 
+72 612 moveto (     Besides another inconvenience, if learned men be the first) show 
+72 588 moveto (receivers out of books and dispreaders both of vice and error,) show 
+72 564 moveto (how shall the licensers themselves be confided in, unless we can) show 
+72 540 moveto (confer upon them, or they assume to themselves above all others) show 
+72 516 moveto (in the land, the grace of infallibility and uncorruptedness?  And) show 
+72 492 moveto (again, if it be true that a wise man, like a good refiner, can) show 
+72 468 moveto (gather gold out of the drossiest volume, and that a fool will be) show 
+72 444 moveto (a fool with the best book, yea or without book; there is no) show 
+72 420 moveto (reason that we should deprive a wise man of any advantage to his) show 
+72 396 moveto (wisdom, while we seek to restrain from a fool, that which being) show 
+72 372 moveto (restrained will be no hindrance to his folly.  For if there) show 
+72 348 moveto (should be so much exactness always used to keep that from him) show 
+72 324 moveto (which is unfit for his reading, we should in the judgment of) show 
+72 300 moveto (Aristotle not only, but of Solomon and of our Saviour, not) show 
+72 276 moveto (vouchsafe him good precepts, and by consequence not willingly) show 
+72 252 moveto (admit him to good books; as being certain that a wise man will) show 
+72 228 moveto (make better use of an idle pamphlet, than a fool will do of) show 
+72 204 moveto (sacred Scripture.) show 
+72 180 moveto (     'Tis next alleged we must not expose ourselves to) show 
+72 156 moveto (temptations without necessity, and next to that, not employ our) show 
+72 132 moveto (time in vain things.  To both these objections one answer will) show 
+72 108 moveto (serve, out of the grounds already laid, that to all men such) show 
+72 84 moveto (books are not temptations, nor vanities, but useful drugs and) show 
+page-end
+%%Page: 24 24
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/24) show 
+72 708 moveto (materials wherewith to temper and compose effective and strong) show 
+72 684 moveto (medicines, which man's life cannot want.  The rest, as children) show 
+72 660 moveto (and childish men, who have not the art to qualify and prepare) show 
+72 636 moveto (these working minerals, well may be exhorted to forbear, but) show 
+72 612 moveto (hindered forcibly they cannot be by all the licensing that) show 
+72 588 moveto (Sainted Inquisition could ever yet contrive.  Which is what I) show 
+72 564 moveto (promised to deliver next:  that this order of licensing conduces) show 
+72 540 moveto (nothing to the end for which it was framed; and hath almost) show 
+72 516 moveto (prevented me by being clear already while thus much hath been) show 
+72 492 moveto (explaining.  See the ingenuity of Truth, who, when she gets a) show 
+72 468 moveto (free and willing hand, opens herself faster than the pace of) show 
+72 444 moveto (method and discourse can overtake her.) show 
+72 420 moveto (     It was the task which I began with, to show that no nation,) show 
+72 396 moveto (or well-instituted state, if they valued books at all, did ever) show 
+72 372 moveto (use this way of licensing; and it might be answered, that this is) show 
+72 348 moveto (a piece of prudence lately discovered.  To which I return, that) show 
+72 324 moveto (as it was a thing slight and obvious to think on, so if it had) show 
+72 300 moveto (been difficult to find out, there wanted not among them long) show 
+72 276 moveto (since who suggested such a course; which they not following,) show 
+72 252 moveto (leave us a pattern of their judgment that it was not the rest) show 
+72 228 moveto (knowing, but the not approving, which was the cause of their not) show 
+72 204 moveto (using it.) show 
+72 180 moveto (     Plato, a man of high authority, indeed, but least of all for) show 
+72 156 moveto (his Commonwealth, in the book of his Laws, which no city ever yet) show 
+72 132 moveto (received, fed his fancy by making many edicts to his airy) show 
+72 108 moveto (burgomasters, which they who otherwise admire him wish had been) show 
+72 84 moveto (rather buried and excused in the genial cups of an Academic night) show 
+page-end
+%%Page: 25 25
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/25) show 
+72 708 moveto (sitting.  By which laws he seems to tolerate no kind of learning) show 
+72 684 moveto (but by unalterable decree, consisting most of practical) show 
+72 660 moveto (traditions, to the attainment whereof a library of smaller bulk) show 
+72 636 moveto (than his own Dialogues would be abundant.  And there also enacts,) show 
+72 612 moveto (that no poet should so much as read to any private man what he) show 
+72 588 moveto (had written, until the judges and law-keepers had seen it, and) show 
+72 564 moveto (allowed it.  But that Plato meant this law peculiarly to that) show 
+72 540 moveto (commonwealth which he had imagined, and to no other, is evident.) show 
+72 516 moveto (Why was he not else a lawgiver to himself, but a transgressor,) show 
+72 492 moveto (and to be expelled by his own magistrates; both for the wanton) show 
+72 468 moveto (epigrams and dialogues which he made, and his perpetual reading) show 
+72 444 moveto (of Sophron Mimus and Aristophanes, books of grossest infamy, and) show 
+72 420 moveto (also for commending the latter of them, though he were the) show 
+72 396 moveto (malicious libeller of his chief friends, to be read by the tyrant) show 
+72 372 moveto (Dionysius, who had little need of such trash to spend his time) show 
+72 348 moveto (on?  But that he knew this licensing of poems had reference and) show 
+72 324 moveto (dependence to many other provisos there set down in his fancied) show 
+72 300 moveto (republic, which in this world could have no place:  and so) show 
+72 276 moveto (neither he himself, nor any magistrate or city, ever imitated) show 
+72 252 moveto (that course, which, taken apart from those other collateral) show 
+72 228 moveto (injunctions, must needs be vain and fruitless.  For if they fell) show 
+72 204 moveto (upon one kind of strictness, unless their care were equal to) show 
+72 180 moveto (regulate all other things of like aptness to corrupt the mind,) show 
+72 156 moveto (that single endeavour they knew would be but a fond labour; to) show 
+72 132 moveto (shut and fortify one gate against corruption, and be necessitated) show 
+72 108 moveto (to leave others round about wide open.) show 
+72 84 moveto (     If we think to regulate printing, thereby to rectify) show 
+page-end
+%%Page: 26 26
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/26) show 
+72 708 moveto (manners, we must regulate all recreation and pastimes, all that) show 
+72 684 moveto (is delightful to man.  No music must be heard, no song be set or) show 
+72 660 moveto (sung, but what is grave and Doric.  There must be licensing) show 
+72 636 moveto (dancers, that no gesture, motion, or deportment be taught our) show 
+72 612 moveto (youth but what by their allowance shall be thought honest; for) show 
+72 588 moveto (such Plato was provided of.  It will ask more than the work of) show 
+72 564 moveto (twenty licensers to examine all the lutes, the violins, and the) show 
+72 540 moveto (guitars in every house; they must not be suffered to prattle as) show 
+72 516 moveto (they do, but must be licensed what they may say.  And who shall) show 
+72 492 moveto (silence all the airs and madrigals that whisper softness in) show 
+72 468 moveto (chambers?  The windows also, and the balconies must be thought) show 
+72 444 moveto (on; there are shrewd books, with dangerous frontispieces, set to) show 
+72 420 moveto (sale; who shall prohibit them, shall twenty licensers?  The) show 
+72 396 moveto (villages also must have their visitors to inquire what lectures) show 
+72 372 moveto (the bagpipe and the rebeck reads, even to the ballatry and the) show 
+72 348 moveto (gamut of every municipal fiddler, for these are the countryman's) show 
+72 324 moveto (Arcadias, and his Monte Mayors.) show 
+72 300 moveto (     Next, what more national corruption, for which England hears) show 
+72 276 moveto (ill abroad, than household gluttony:  who shall be the rectors of) show 
+72 252 moveto (our daily rioting?  And what shall be done to inhibit the) show 
+72 228 moveto (multitudes that frequent those houses where drunkenness is sold) show 
+72 204 moveto (and harboured?  Our garments also should be referred to the) show 
+72 180 moveto (licensing of some more sober workmasters to see them cut into a) show 
+72 156 moveto (less wanton garb.  Who shall regulate all the mixed conversation) show 
+72 132 moveto (of our youth, male and female together, as is the fashion of this) show 
+72 108 moveto (country?  Who shall still appoint what shall be discoursed, what) show 
+72 84 moveto (presumed, and no further?  Lastly, who shall forbid and separate) show 
+page-end
+%%Page: 27 27
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/27) show 
+72 708 moveto (all idle resort, all evil company?  These things will be, and) show 
+72 684 moveto (must be; but how they shall be least hurtful, how least enticing,) show 
+72 660 moveto (herein consists the grave and governing wisdom of a state.) show 
+72 636 moveto (     To sequester out of the world into Atlantic and Utopian) show 
+72 612 moveto (polities, which never can be drawn into use, will not mend our) show 
+72 588 moveto (condition; but to ordain wisely as in this world of evil, in the) show 
+72 564 moveto (midst whereof God hath placed us unavoidably.  Nor is it Plato's) show 
+72 540 moveto (licensing of books will do this, which necessarily pulls along) show 
+72 516 moveto (with it so many other kinds of licensing, as will make us all) show 
+72 492 moveto (both ridiculous and weary, and yet frustrate; but those) show 
+72 468 moveto (unwritten, or at least unconstraining, laws of virtuous) show 
+72 444 moveto (education, religious and civil nurture, which Plato there) show 
+72 420 moveto (mentions as the bonds and ligaments of the commonwealth, the) show 
+72 396 moveto (pillars and the sustainers of every written statute; these they) show 
+72 372 moveto (be which will bear chief sway in such matters as these, when all) show 
+72 348 moveto (licensing will be easily eluded.  Impunity and remissness, for) show 
+72 324 moveto (certain, are the bane of a commonwealth; but here the great art) show 
+72 300 moveto (lies, to discern in what the law is to bid restraint and) show 
+72 276 moveto (punishment, and in what things persuasion only is to work.) show 
+72 252 moveto (     If every action, which is good or evil in man at ripe years,) show 
+72 228 moveto (were to be under pittance and prescription and compulsion, what) show 
+72 204 moveto (were virtue but a name, what praise could be then due to well-) show 
+72 180 moveto (doing, what gramercy to be sober, just, or continent?  Many there) show 
+72 156 moveto (be that complain of divine Providence for suffering Adam to) show 
+72 132 moveto (transgress; foolish tongues!  When God gave him reason, he gave) show 
+72 108 moveto (him freedom to choose, for reason is but choosing; he had been) show 
+72 84 moveto (else a mere artificial Adam, such an Adam as he is in the) show 
+page-end
+%%Page: 28 28
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/28) show 
+72 708 moveto (motions.  We ourselves esteem not of that obedience, or love, or) show 
+72 684 moveto (gift, which is of force:  God therefore left him free, set before) show 
+72 660 moveto (him a provoking object, ever almost in his eyes; herein consisted) show 
+72 636 moveto (his merit, herein the right of his reward, the praise of his) show 
+72 612 moveto (abstinence.  Wherefore did he create passions within us,) show 
+72 588 moveto (pleasures round about us, but that these rightly tempered are the) show 
+72 564 moveto (very ingredients of virtue?) show 
+72 540 moveto (     They are not skilful considerers of human things, who) show 
+72 516 moveto (imagine to remove sin by removing the matter of sin; for, besides) show 
+72 492 moveto (that it is a huge heap increasing under the very act of) show 
+72 468 moveto (diminishing, though some part of it may for a time be withdrawn) show 
+72 444 moveto (from some persons, it cannot from all, in such a universal thing) show 
+72 420 moveto (as books are; and when this is done, yet the sin remains entire.) show 
+72 396 moveto (Though ye take from a covetous man all his treasure, he has yet) show 
+72 372 moveto (one jewel left, ye cannot bereave him of his covetousness.  Banish) show 
+72 348 moveto (all objects of lust, shut up all youth into the severest) show 
+72 324 moveto (discipline that can be exercised in any hermitage, ye cannot make) show 
+72 300 moveto (them chaste, that came not hither so; such great care and wisdom) show 
+72 276 moveto (is required to the right managing of this point.  Suppose we) show 
+72 252 moveto (could expel sin by this means; look how much we thus expel of) show 
+72 228 moveto (sin, so much we expel of virtue:  for the matter of them both is) show 
+72 204 moveto (the same; remove that, and ye remove them both alike.) show 
+72 180 moveto (     This justifies the high providence of God, who, though he) show 
+72 156 moveto (command us temperance, justice, continence, yet pours out before) show 
+72 132 moveto (us, even to a profuseness, all desirable things, and gives us) show 
+72 108 moveto (minds that can wander beyond all limit and satiety.  Why should) show 
+72 84 moveto (we then affect a rigour contrary to the manner of God and of) show 
+page-end
+%%Page: 29 29
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/29) show 
+72 708 moveto (nature, by abridging or scanting those means, which books freely) show 
+72 684 moveto (permitted are, both to the trial of virtue and the exercise of) show 
+72 660 moveto (truth?  It would be better done, to learn that the law must needs) show 
+72 636 moveto (be frivolous, which goes to restrain things, uncertainly and yet) show 
+72 612 moveto (equally working to good and to evil.  And were I the chooser, a) show 
+72 588 moveto (dream of well-doing should be preferred before many times as much) show 
+72 564 moveto (the forcible hindrance of evil-doing.  For God sure esteems the) show 
+72 540 moveto (growth and completing of one virtuous person more than the) show 
+72 516 moveto (restraint of ten vicious.) show 
+72 492 moveto (     And albeit whatever thing we hear or see, sitting, walking,) show 
+72 468 moveto (travelling, or conversing, may be fitly called our book, and is) show 
+72 444 moveto (of the same effect that writings are, yet grant the thing to be) show 
+72 420 moveto (prohibited were only books, it appears that this Order hitherto) show 
+72 396 moveto (is far insufficient to the end which it intends.  Do we not see,) show 
+72 372 moveto (not once or oftener, but weekly, that continued court-libel) show 
+72 348 moveto (against the Parliament and City, printed, as the wet sheets can) show 
+72 324 moveto (witness, and dispersed among us, for all that licensing can do?) show 
+72 300 moveto (Yet this is the prime service a man would think, wherein this) show 
+72 276 moveto (Order should give proof of itself.  If it were executed, you'll) show 
+72 252 moveto (say.  But certain, if execution be remiss or blindfold now, and) show 
+72 228 moveto (in this particular, what will it be hereafter and in other books?) show 
+72 204 moveto (If then the Order shall not be vain and frustrate, behold a new) show 
+72 180 moveto (labour, Lords and Commons, ye must repeal and proscribe all) show 
+72 156 moveto (scandalous and unlicensed books already printed and divulged;) show 
+72 132 moveto (after ye have drawn them up into a list, that all may know which) show 
+72 108 moveto (are condemned, and which not; and ordain that no foreign books be) show 
+72 84 moveto (delivered out of custody, till they have been read over.  This) show 
+page-end
+%%Page: 30 30
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/30) show 
+72 708 moveto (office will require the whole time of not a few overseers, and) show 
+72 684 moveto (those no vulgar men.  There be also books which are partly useful) show 
+72 660 moveto (and excellent, partly culpable and pernicious; this work will ask) show 
+72 636 moveto (as many more officials, to make expurgations and expunctions,) show 
+72 612 moveto (that the commonwealth of learning be not damnified.  In fine,) show 
+72 588 moveto (when the multitude of books increase upon their hands, ye must be) show 
+72 564 moveto (fain to catalogue all those printers who are found frequently) show 
+72 540 moveto (offending, and forbid the importation of their whole suspected) show 
+72 516 moveto (typography.  In a word, that this your Order may be exact and not) show 
+72 492 moveto (deficient, ye must reform it perfectly according to the model of) show 
+72 468 moveto (Trent and Seville, which I know ye abhor to do.) show 
+72 444 moveto (     Yet though ye should condescend to this, which God forbid,) show 
+72 420 moveto (the Order still would be but fruitless and defective to that end) show 
+72 396 moveto (whereto ye meant it.  If to prevent sects and schisms, who is so) show 
+72 372 moveto (unread or so uncatechized in story, that hath not heard of many) show 
+72 348 moveto (sects refusing books as a hindrance, and preserving their) show 
+72 324 moveto (doctrine unmixed for many ages, only by unwritten traditions?  The) show 
+72 300 moveto (Christian faith, for that was once a schism, is not unknown to) show 
+72 276 moveto (have spread all over Asia, ere any Gospel or Epistle was seen in) show 
+72 252 moveto (writing.  If the amendment of manners be aimed at, look into) show 
+72 228 moveto (Italy and Spain, whether those places be one scruple the better,) show 
+72 204 moveto (the honester, the wiser, the chaster, since all the inquisitional) show 
+72 180 moveto (rigour that hath been executed upon books.) show 
+72 156 moveto (     Another reason, whereby to make it plain that this Order) show 
+72 132 moveto (will miss the end it seeks, consider by the quality which ought) show 
+72 108 moveto (to be in every licenser.  It cannot be denied but that he who is) show 
+72 84 moveto (made judge to sit upon the birth or death of books, whether they) show 
+page-end
+%%Page: 31 31
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/31) show 
+72 708 moveto (may be wafted into this world or not, had need to be a man above) show 
+72 684 moveto (the common measure, both studious, learned, and judicious; there) show 
+72 660 moveto (may be else no mean mistakes in the censure of what is passable) show 
+72 636 moveto (or not; which is also no mean injury.  If he be of such worth as) show 
+72 612 moveto (behooves him, there cannot be a more tedious and unpleasing) show 
+72 588 moveto (journey-work, a greater loss of time levied upon his head, than) show 
+72 564 moveto (to be made the perpetual reader of unchosen books and pamphlets,) show 
+72 540 moveto (ofttimes huge volumes.  There is no book that is acceptable) show 
+72 516 moveto (unless at certain seasons; but to be enjoined the reading of that) show 
+72 492 moveto (at all times, and in a hand scarce legible, whereof three pages) show 
+72 468 moveto (would not down at any time in the fairest print, is an imposition) show 
+72 444 moveto (which I cannot believe how he that values time and his own) show 
+72 420 moveto (studies, or is but of a sensible nostril, should be able to) show 
+72 396 moveto (endure.  In this one thing I crave leave of the present licensers) show 
+72 372 moveto (to be pardoned for so thinking; who doubtless took this office) show 
+72 348 moveto (up, looking on it through their obedience to the Parliament,) show 
+72 324 moveto (whose command perhaps made all things seem easy and unlaborious) show 
+72 300 moveto (to them; but that this short trial hath wearied them out already,) show 
+72 276 moveto (their own expressions and excuses to them who make so many) show 
+72 252 moveto (journeys to solicit their licence are testimony enough.  Seeing) show 
+72 228 moveto (therefore those who now possess the employment by all evident) show 
+72 204 moveto (signs wish themselves well rid of it; and that no man of worth,) show 
+72 180 moveto (none that is not a plain unthrift of his own hours, is ever) show 
+72 156 moveto (likely to succeed them, except he mean to put himself to the) show 
+72 132 moveto (salary of a press corrector; we may easily foresee what kind of) show 
+72 108 moveto (licensers we are to expect hereafter, either ignorant, imperious,) show 
+72 84 moveto (and remiss, or basely pecuniary.  This is what I had to show,) show 
+page-end
+%%Page: 32 32
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/32) show 
+72 708 moveto (wherein this Order cannot conduce to that end whereof it bears) show 
+72 684 moveto (the intention.) show 
+72 660 moveto (     I lastly proceed from the no good it can do, to the manifest) show 
+72 636 moveto (hurt it causes, in being first the greatest discouragement and) show 
+72 612 moveto (affront that can be offered to learning, and to learned men.) show 
+72 588 moveto (     It was the complaint and lamentation of prelates, upon every) show 
+72 564 moveto (least breath of a motion to remove pluralities, and distribute) show 
+72 540 moveto (more equally Church revenues, that then all learning would be for) show 
+72 516 moveto (ever dashed and discouraged.  But as for that opinion, I never) show 
+72 492 moveto (found cause to think that the tenth part of learning stood or) show 
+72 468 moveto (fell with the clergy:  nor could I ever but hold it for a sordid) show 
+72 444 moveto (and unworthy speech of any churchman who had a competency left) show 
+72 420 moveto (him.  If therefore ye be loath to dishearten utterly and) show 
+72 396 moveto (discontent, not the mercenary crew of false pretenders to) show 
+72 372 moveto (learning, but the free and ingenuous sort of such as evidently) show 
+72 348 moveto (were born to study, and love learning for itself, not for lucre) show 
+72 324 moveto (or any other end but the service of God and of truth, and perhaps) show 
+72 300 moveto (that lasting fame and perpetuity of praise which God and good men) show 
+72 276 moveto (have consented shall be the reward of those whose published) show 
+72 252 moveto (labours advance the good of mankind; then know that, so far to) show 
+72 228 moveto (distrust the judgment and the honesty of one who hath but a) show 
+72 204 moveto (common repute in learning, and never yet offended, as not to) show 
+72 180 moveto (count him fit to print his mind without a tutor and examiner,) show 
+72 156 moveto (lest he should drop a schism, or something of corruption, is the) show 
+72 132 moveto (greatest displeasure and indignity to a free and knowing spirit) show 
+72 108 moveto (that can be put upon him.) show 
+72 84 moveto (     What advantage is it to be a man, over it is to be a boy at) show 
+page-end
+%%Page: 33 33
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/33) show 
+72 708 moveto (school, if we have only escaped the ferula to come under the) show 
+72 684 moveto (fescue of an Imprimatur; if serious and elaborate writings, as if) show 
+72 660 moveto (they were no more than the theme of a grammar-lad under his) show 
+72 636 moveto (pedagogue, must not be uttered without the cursory eyes of a) show 
+72 612 moveto (temporizing and extemporizing licenser?  He who is not trusted) show 
+72 588 moveto (with his own actions, his drift not being known to be evil, and) show 
+72 564 moveto (standing to the hazard of law and penalty, has no great argument) show 
+72 540 moveto (to think himself reputed in the Commonwealth wherein he was born) show 
+72 516 moveto (for other than a fool or a foreigner.  When a man writes to the) show 
+72 492 moveto (world, he summons up all his reason and deliberation to assist) show 
+72 468 moveto (him; he searches, meditates, is industrious, and likely consults) show 
+72 444 moveto (and confers with his judicious friends; after all which done he) show 
+72 420 moveto (takes himself to be informed in what he writes, as well as any) show 
+72 396 moveto (that writ before him.  If, in this the most consummate act of his) show 
+72 372 moveto (fidelity and ripeness, no years, no industry, no former proof of) show 
+72 348 moveto (his abilities can bring him to that state of maturity, as not to) show 
+72 324 moveto (be still mistrusted and suspected, unless he carry all his) show 
+72 300 moveto (considerate diligence, all his midnight watchings and expense of) show 
+72 276 moveto (Palladian oil, to the hasty view of an unleisured licenser,) show 
+72 252 moveto (perhaps much his younger, perhaps his inferior in judgment,) show 
+72 228 moveto (perhaps one who never knew the labour of bookwriting, and if he) show 
+72 204 moveto (be not repulsed or slighted, must appear in print like a puny) show 
+72 180 moveto (with his guardian, and his censor's hand on the back of his title) show 
+72 156 moveto (to be his bail and surety that he is no idiot or seducer, it) show 
+72 132 moveto (cannot be but a dishonour and derogation to the author, to the) show 
+72 108 moveto (book, to the privilege and dignity of learning.) show 
+72 84 moveto (     And what if the author shall be one so copious of fancy, as) show 
+page-end
+%%Page: 34 34
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/34) show 
+72 708 moveto (to have many things well worth the adding come into his mind) show 
+72 684 moveto (after licensing, while the book is yet under the press, which not) show 
+72 660 moveto (seldom happens to the best and diligentest writers; and that) show 
+72 636 moveto (perhaps a dozen times in one book?  The printer dares not go) show 
+72 612 moveto (beyond his licensed copy; so often then must the author trudge to) show 
+72 588 moveto (his leave-giver, that those his new insertions may be viewed; and) show 
+72 564 moveto (many a jaunt will be made, ere that licenser, for it must be the) show 
+72 540 moveto (same man, can either be found, or found at leisure; meanwhile) show 
+72 516 moveto (either the press must stand still, which is no small damage, or) show 
+72 492 moveto (the author lose his accuratest thoughts, and send the book forth) show 
+72 468 moveto (worse than he had made it, which to a diligent writer is the) show 
+72 444 moveto (greatest melancholy and vexation that can befall.) show 
+72 420 moveto (     And how can a man teach with authority, which is the life of) show 
+72 396 moveto (teaching; how can he be a doctor in his book as he ought to be,) show 
+72 372 moveto (or else had better be silent, whenas all he teaches, all he) show 
+72 348 moveto (delivers, is but under the tuition, under the correction of his) show 
+72 324 moveto (patriarchal licenser to blot or alter what precisely accords not) show 
+72 300 moveto (with the hidebound humour which he calls his judgment?  When) show 
+72 276 moveto (every acute reader, upon the first sight of a pedantic licence,) show 
+72 252 moveto (will be ready with these like words to ding the book a quoit's) show 
+72 228 moveto (distance from him:  I hate a pupil teacher, I endure not an) show 
+72 204 moveto (instructor that comes to me under the wardship of an overseeing) show 
+72 180 moveto (fist.  I know nothing of the licenser, but that I have his own) show 
+72 156 moveto (hand here for his arrogance; who shall warrant me his judgment?) show 
+72 132 moveto (The State, sir, replies the stationer, but has a quick return:) show 
+72 108 moveto (The State shall be my governors, but not my critics; they may be) show 
+72 84 moveto (mistaken in the choice of a licenser, as easily as this licenser) show 
+page-end
+%%Page: 35 35
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/35) show 
+72 708 moveto (may be mistaken in an author; this is some common stuff; and he) show 
+72 684 moveto (might add from Sir Francis Bacon, THAT SUCH AUTHORIZED BOOKS ARE) show 
+72 660 moveto (BUT THE LANGUAGE OF THE TIMES.  For though a licenser should) show 
+72 636 moveto (happen to be judicious more than ordinary, which will be a great) show 
+72 612 moveto (jeopardy of the next succession, yet his very office and his) show 
+72 588 moveto (commission enjoins him to let pass nothing but what is vulgarly) show 
+72 564 moveto (received already.) show 
+72 540 moveto (     Nay, which is more lamentable, if the work of any deceased) show 
+72 516 moveto (author, though never so famous in his lifetime and even to this) show 
+72 492 moveto (day, come to their hands for licence to be printed, or reprinted,) show 
+72 468 moveto (if there be found in his book one sentence of a venturous edge,) show 
+72 444 moveto (uttered in the height of zeal \(and who knows whether it might not) show 
+72 420 moveto (be the dictate of a divine spirit?\)  yet not suiting with every) show 
+72 396 moveto (low decrepit humour of their own, though it were Knox himself,) show 
+72 372 moveto (the reformer of a kingdom, that spake it, they will not pardon) show 
+72 348 moveto (him their dash:  the sense of that great man shall to all) show 
+72 324 moveto (posterity be lost, for the fearfulness or the presumptuous) show 
+72 300 moveto (rashness of a perfunctory licenser.  And to what an author this) show 
+72 276 moveto (violence hath been lately done, and in what book of greatest) show 
+72 252 moveto (consequence to be faithfully published, I could now instance, but) show 
+72 228 moveto (shall forbear till a more convenient season.) show 
+72 204 moveto (     Yet if these things be not resented seriously and timely by) show 
+72 180 moveto (them who have the remedy in their power, but that such iron-) show 
+72 156 moveto (moulds as these shall have authority to gnaw out the choicest) show 
+72 132 moveto (periods of exquisitest books, and to commit such a treacherous) show 
+72 108 moveto (fraud against the orphan remainders of worthiest men after death,) show 
+72 84 moveto (the more sorrow will belong to that hapless race of men, whose) show 
+page-end
+%%Page: 36 36
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/36) show 
+72 708 moveto (misfortune it is to have understanding.  Henceforth let no man) show 
+72 684 moveto (care to learn, or care to be more than worldly-wise; for) show 
+72 660 moveto (certainly in higher matters to be ignorant and slothful, to be a) show 
+72 636 moveto (common steadfast dunce, will be the only pleasant life, and only) show 
+72 612 moveto (in request.) show 
+72 588 moveto (     And it is a particular disesteem of every knowing person) show 
+72 564 moveto (alive, and most injurious to the written labours and monuments of) show 
+72 540 moveto (the dead, so to me it seems an undervaluing and vilifying of the) show 
+72 516 moveto (whole nation.  I cannot set so light by all the invention, the) show 
+72 492 moveto (art, the wit, the grave and solid judgment which is in England,) show 
+72 468 moveto (as that it can be comprehended in any twenty capacities how good) show 
+72 444 moveto (soever, much less that it should not pass except their) show 
+72 420 moveto (superintendence be over it, except it be sifted and strained with) show 
+72 396 moveto (their strainers, that it should be uncurrent without their manual) show 
+72 372 moveto (stamp.  Truth and understanding are not such wares as to be) show 
+72 348 moveto (monopolized and traded in by tickets and statutes and standards.) show 
+72 324 moveto (We must not think to make a staple commodity of all the knowledge) show 
+72 300 moveto (in the land, to mark and licence it like our broadcloth and our) show 
+72 276 moveto (woolpacks.  What is it but a servitude like that imposed by the) show 
+72 252 moveto (Philistines, not to be allowed the sharpening of our own axes and) show 
+72 228 moveto (coulters, but we must repair from all quarters to twenty) show 
+72 204 moveto (licensing forges?  Had anyone written and divulged erroneous) show 
+72 180 moveto (things and scandalous to honest life, misusing and forfeiting the) show 
+72 156 moveto (esteem had of his reason among men, if after conviction this only) show 
+72 132 moveto (censure were adjudged him that he should never henceforth write) show 
+72 108 moveto (but what were first examined by an appointed officer, whose hand) show 
+72 84 moveto (should be annexed to pass his credit for him that now he might be) show 
+page-end
+%%Page: 37 37
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/37) show 
+72 708 moveto (safely read; it could not be apprehended less than a disgraceful) show 
+72 684 moveto (punishment.  Whence to include the whole nation, and those that) show 
+72 660 moveto (never yet thus offended, under such a diffident and suspectful) show 
+72 636 moveto (prohibition, may plainly be understood what a disparagement it) show 
+72 612 moveto (is.  So much the more, whenas debtors and delinquents may walk) show 
+72 588 moveto (abroad without a keeper, but unoffensive books must not stir) show 
+72 564 moveto (forth without a visible jailer in their title.) show 
+72 540 moveto (     Nor is it to the common people less than a reproach; for if) show 
+72 516 moveto (we be so jealous over them, as that we dare not trust them with) show 
+72 492 moveto (an English pamphlet, what do we but censure them for a giddy,) show 
+72 468 moveto (vicious, and ungrounded people; in such a sick and weak state of) show 
+72 444 moveto (faith and discretion, as to be able to take nothing down but) show 
+72 420 moveto (through the pipe of a licenser?  That this is care or love of) show 
+72 396 moveto (them, we cannot pretend, whenas, in those popish places where the) show 
+72 372 moveto (laity are most hated and despised, the same strictness is used) show 
+72 348 moveto (over them.  Wisdom we cannot call it, because it stops but one) show 
+72 324 moveto (breach of licence, nor that neither:  whenas those corruptions,) show 
+72 300 moveto (which it seeks to prevent, break in faster at other doors which) show 
+72 276 moveto (cannot be shut.) show 
+72 252 moveto (     And in conclusion it reflects to the disrepute of our) show 
+72 228 moveto (ministers also, of whose labours we should hope better, and of) show 
+72 204 moveto (the proficiency which their flock reaps by them, than that after) show 
+72 180 moveto (all this light of the Gospel which is, and is to be, and all this) show 
+72 156 moveto (continual preaching, they should still be frequented with such an) show 
+72 132 moveto (unprincipled, unedified and laic rabble, as that the whiff of) show 
+72 108 moveto (every new pamphlet should stagger them out of their catechism and) show 
+72 84 moveto (Christian walking.  This may have much reason to discourage the) show 
+page-end
+%%Page: 38 38
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/38) show 
+72 708 moveto (ministers when such a low conceit is had of all their) show 
+72 684 moveto (exhortations, and the benefiting of their hearers, as that they) show 
+72 660 moveto (are not thought fit to be turned loose to three sheets of paper) show 
+72 636 moveto (without a licenser; that all the sermons, all the lectures) show 
+72 612 moveto (preached, printed, vented in such numbers, and such volumes, as) show 
+72 588 moveto (have now well nigh made all other books unsaleable, should not be) show 
+72 564 moveto (armour enough against one single Enchiridion, without the castle) show 
+72 540 moveto (of St. Angelo of an Imprimatur.) show 
+72 516 moveto (     And lest some should persuade ye, Lords and Commons, that) show 
+72 492 moveto (these arguments of learned men's discouragement at this your) show 
+72 468 moveto (Order are mere flourishes, and not real, I could recount what I) show 
+72 444 moveto (have seen and heard in other countries, where this kind of) show 
+72 420 moveto (inquisition tyrannizes; when I have sat among their learned men,) show 
+72 396 moveto (for that honour I had, and been counted happy to be born in such) show 
+72 372 moveto (a place of philosophic freedom, as they supposed England was,) show 
+72 348 moveto (while themselves did nothing but bemoan the servile condition) show 
+72 324 moveto (into which learning amongst them was brought; that this was it) show 
+72 300 moveto (which had damped the glory of Italian wits; that nothing had been) show 
+72 276 moveto (there written now these many years but flattery and fustian.) show 
+72 252 moveto (There it was that I found and visited the famous Galileo, grown) show 
+72 228 moveto (old, a prisoner to the Inquisition, for thinking in astronomy) show 
+72 204 moveto (otherwise than the Franciscan and Dominican licensers thought.) show 
+72 180 moveto (And though I knew that England then was groaning loudest under) show 
+72 156 moveto (the prelatical yoke, nevertheless I took it as a pledge of future) show 
+72 132 moveto (happiness, that other nations were so persuaded of her liberty.) show 
+72 108 moveto (Yet was it beyond my hope that those worthies were then breathing) show 
+72 84 moveto (in her air, who should be her leaders to such a deliverance, as) show 
+page-end
+%%Page: 39 39
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/39) show 
+72 708 moveto (shall never be forgotten by any revolution of time that this) show 
+72 684 moveto (world hath to finish.  When that was once begun, it was as little) show 
+72 660 moveto (in my fear that what words of complaint I heard among learned men) show 
+72 636 moveto (of other parts uttered against the Inquisition, the same I should) show 
+72 612 moveto (hear by as learned men at home, uttered in time of Parliament) show 
+72 588 moveto (against an order of licensing; and that so generally that, when I) show 
+72 564 moveto (had disclosed myself a companion of their discontent, I might) show 
+72 540 moveto (say, if without envy, that he whom an honest quaestorship had) show 
+72 516 moveto (endeared to the Sicilians was not more by them importuned against) show 
+72 492 moveto (Verres, than the favourable opinion which I had among many who) show 
+72 468 moveto (honour ye, and are known and respected by ye, loaded me with) show 
+72 444 moveto (entreaties and persuasions, that I would not despair to lay) show 
+72 420 moveto (together that which just reason should bring into my mind, toward) show 
+72 396 moveto (the removal of an undeserved thraldom upon learning.  That this) show 
+72 372 moveto (is not therefore the disburdening of a particular fancy, but the) show 
+72 348 moveto (common grievance of all those who had prepared their minds and) show 
+72 324 moveto (studies above the vulgar pitch to advance truth in others, and) show 
+72 300 moveto (from others to entertain it, thus much may satisfy.) show 
+72 276 moveto (     And in their name I shall for neither friend nor foe conceal) show 
+72 252 moveto (what the general murmur is; that if it come to inquisitioning) show 
+72 228 moveto (again and licensing, and that we are so timorous of ourselves,) show 
+72 204 moveto (and so suspicious of all men, as to fear each book and the) show 
+72 180 moveto (shaking of every leaf, before we know what the contents are; if) show 
+72 156 moveto (some who but of late were little better than silenced from) show 
+72 132 moveto (preaching shall come now to silence us from reading, except what) show 
+72 108 moveto (they please, it cannot be guessed what is intended by some but a) show 
+72 84 moveto (second tyranny over learning:  and will soon put it out of) show 
+page-end
+%%Page: 40 40
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/40) show 
+72 708 moveto (controversy, that bishops and presbyters are the same to us, both) show 
+72 684 moveto (name and thing.  That those evils of prelaty, which before from) show 
+72 660 moveto (five or six and twenty sees were distributively charged upon the) show 
+72 636 moveto (whole people, will now light wholly upon learning, is not obscure) show 
+72 612 moveto (to us:  whenas now the pastor of a small unlearned parish on the) show 
+72 588 moveto (sudden shall be exalted archbishop over a large diocese of books,) show 
+72 564 moveto (and yet not remove, but keep his other cure too, a mystical) show 
+72 540 moveto (pluralist.  He who but of late cried down the sole ordination of) show 
+72 516 moveto (every novice Bachelor of Art, and denied sole jurisdiction over) show 
+72 492 moveto (the simplest parishioner, shall now at home in his private chair) show 
+72 468 moveto (assume both these over worthiest and excellentest books and) show 
+72 444 moveto (ablest authors that write them.) show 
+72 420 moveto (     This is not, ye Covenants and Protestations that we have) show 
+72 396 moveto (made!  this is not to put down prelaty; this is but to chop an) show 
+72 372 moveto (episcopacy; this is but to translate the Palace Metropolitan from) show 
+72 348 moveto (one kind of dominion into another; this is but an old canonical) show 
+72 324 moveto (sleight of commuting our penance.  To startle thus betimes at a) show 
+72 300 moveto (mere unlicensed pamphlet will after a while be afraid of every) show 
+72 276 moveto (conventicle, and a while after will make a conventicle of every) show 
+72 252 moveto (Christian meeting.  But I am certain that a State governed by the) show 
+72 228 moveto (rules of justice and fortitude, or a Church built and founded) show 
+72 204 moveto (upon the rock of faith and true knowledge, cannot be so) show 
+72 180 moveto (pusillanimous.  While things are yet not constituted in religion,) show 
+72 156 moveto (that freedom of writing should be restrained by a discipline) show 
+72 132 moveto (imitated from the prelates and learnt by them from the) show 
+72 108 moveto (Inquisition, to shut us up all again into the breast of a) show 
+72 84 moveto (licenser, must needs give cause of doubt and discouragement to) show 
+page-end
+%%Page: 41 41
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/41) show 
+72 708 moveto (all learned and religious men.) show 
+72 684 moveto (     Who cannot but discern the fineness of this politic drift,) show 
+72 660 moveto (and who are the contrivers; that while bishops were to be baited) show 
+72 636 moveto (down, then all presses might be open; it was the people's) show 
+72 612 moveto (birthright and privilege in time of Parliament, it was the) show 
+72 588 moveto (breaking forth of light.  But now, the bishops abrogated and) show 
+72 564 moveto (voided out of the Church, as if our Reformation sought no more) show 
+72 540 moveto (but to make room for others into their seats under another name,) show 
+72 516 moveto (the episcopal arts begin to bud again, the cruse of truth must) show 
+72 492 moveto (run no more oil, liberty of printing must be enthralled again) show 
+72 468 moveto (under a prelatical commission of twenty, the privilege of the) show 
+72 444 moveto (people nullified, and, which is worse, the freedom of learning) show 
+72 420 moveto (must groan again, and to her old fetters:  all this the) show 
+72 396 moveto (Parliament yet sitting.  Although their own late arguments and) show 
+72 372 moveto (defences against the prelates might remember them, that this) show 
+72 348 moveto (obstructing violence meets for the most part with an event) show 
+72 324 moveto (utterly opposite to the end which it drives at:  instead of) show 
+72 300 moveto (suppressing sects and schisms, it raises them and invests them) show 
+72 276 moveto (with a reputation.  The punishing of wits enhances their) show 
+72 252 moveto (authority, saith the Viscount St. Albans; and a forbidden writing) show 
+72 228 moveto (is thought to be a certain spark of truth that flies up in the) show 
+72 204 moveto (faces of them who seek to tread it out.  This Order, therefore,) show 
+72 180 moveto (may prove a nursing-mother to sects, but I shall easily show how) show 
+72 156 moveto (it will be a step-dame to Truth:  and first by disenabling us to) show 
+72 132 moveto (the maintenance of what is known already.) show 
+72 108 moveto (     Well knows he who uses to consider, that our faith and) show 
+72 84 moveto (knowledge thrives by exercise, as well as our limbs and) show 
+page-end
+%%Page: 42 42
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/42) show 
+72 708 moveto (complexion.  Truth is compared in Scripture to a streaming) show 
+72 684 moveto (fountain; if her waters flow not in a perpetual progression, they) show 
+72 660 moveto (sicken into a muddy pool of conformity and tradition.  A man may) show 
+72 636 moveto (be a heretic in the truth; and if he believe things only because) show 
+72 612 moveto (his pastor says so, or the Assembly so determines, without) show 
+72 588 moveto (knowing other reason, though his belief be true, yet the very) show 
+72 564 moveto (truth he holds becomes his heresy.) show 
+72 540 moveto (     There is not any burden that some would gladlier post off to) show 
+72 516 moveto (another than the charge and care of their religion.  There be--who) show 
+72 492 moveto (knows not that there be?--of Protestants and professors who live) show 
+72 468 moveto (and die in as arrant an implicit faith as any lay Papist of) show 
+72 444 moveto (Loretto.  A wealthy man, addicted to his pleasure and to his) show 
+72 420 moveto (profits, finds religion to be a traffic so entangled, and of so) show 
+72 396 moveto (many piddling accounts, that of all mysteries he cannot skill to) show 
+72 372 moveto (keep a stock going upon that trade.  What should he do?  fain he) show 
+72 348 moveto (would have the name to be religious, fain he would bear up with) show 
+72 324 moveto (his neighbours in that.  What does he therefore, but resolves to) show 
+72 300 moveto (give over toiling, and to find himself out some factor, to whose) show 
+72 276 moveto (care and credit he may commit the whole managing of his religious) show 
+72 252 moveto (affairs; some divine of note and estimation that must be.  To him) show 
+72 228 moveto (he adheres, resigns the whole warehouse of his religion, with all) show 
+72 204 moveto (the locks and keys, into his custody; and indeed makes the very) show 
+72 180 moveto (person of that man his religion; esteems his associating with him) show 
+72 156 moveto (a sufficient evidence and commendatory of his own piety.  So that) show 
+72 132 moveto (a man may say his religion is now no more within himself, but is) show 
+72 108 moveto (become a dividual movable, and goes and comes near him, according) show 
+72 84 moveto (as that good man frequents the house.  He entertains him, gives) show 
+page-end
+%%Page: 43 43
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/43) show 
+72 708 moveto (him gifts, feasts him, lodges him; his religion comes home at) show 
+72 684 moveto (night, prays, is liberally supped, and sumptuously laid to sleep;) show 
+72 660 moveto (rises, is saluted, and after the malmsey, or some well-spiced) show 
+72 636 moveto (brewage, and better breakfasted than he whose morning appetite) show 
+72 612 moveto (would have gladly fed on green figs between Bethany and) show 
+72 588 moveto (Jerusalem, his religion walks abroad at eight, and leaves his) show 
+72 564 moveto (kind entertainer in the shop trading all day without his) show 
+72 540 moveto (religion.) show 
+72 516 moveto (     Another sort there be who, when they hear that all things) show 
+72 492 moveto (shall be ordered, all things regulated and settled, nothing) show 
+72 468 moveto (written but what passes through the custom-house of certain) show 
+72 444 moveto (publicans that have the tonnaging and poundaging of all free-) show 
+72 420 moveto (spoken truth, will straight give themselves up into your hands,) show 
+72 396 moveto (make 'em and cut 'em out what religion ye please:  there be) show 
+72 372 moveto (delights, there be recreations and jolly pastimes that will fetch) show 
+72 348 moveto (the day about from sun to sun, and rock the tedious year as in a) show 
+72 324 moveto (delightful dream.  What need they torture their heads with that) show 
+72 300 moveto (which others have taken so strictly and so unalterably into their) show 
+72 276 moveto (own purveying?  These are the fruits which a dull ease and) show 
+72 252 moveto (cessation of our knowledge will bring forth among the people.  How) show 
+72 228 moveto (goodly and how to be wished were such an obedient unanimity as) show 
+72 204 moveto (this, what a fine conformity would it starch us all into!) show 
+72 180 moveto (Doubtless a staunch and solid piece of framework, as any January) show 
+72 156 moveto (could freeze together.) show 
+72 132 moveto (     Nor much better will be the consequence even among the) show 
+72 108 moveto (clergy themselves.  It is no new thing never heard of before, for) show 
+72 84 moveto (a parochial minister, who has his reward and is at his Hercules') show 
+page-end
+%%Page: 44 44
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/44) show 
+72 708 moveto (pillars in a warm benefice, to be easily inclinable, if he have) show 
+72 684 moveto (nothing else that may rouse up his studies, to finish his circuit) show 
+72 660 moveto (in an English Concordance and a topic folio, the gatherings and) show 
+72 636 moveto (savings of a sober graduateship, a Harmony and a Catena; treading) show 
+72 612 moveto (the constant round of certain common doctrinal heads, attended) show 
+72 588 moveto (with their uses, motives, marks, and means, out of which, as out) show 
+72 564 moveto (of an alphabet, or sol-fa, by forming and transforming, joining) show 
+72 540 moveto (and disjoining variously, a little bookcraft, and two hours') show 
+72 516 moveto (meditation, might furnish him unspeakably to the performance of) show 
+72 492 moveto (more than a weekly charge of sermoning:  not to reckon up the) show 
+72 468 moveto (infinite helps of interlinearies, breviaries, synopses, and other) show 
+72 444 moveto (loitering gear.  But as for the multitude of sermons ready) show 
+72 420 moveto (printed and piled up, on every text that is not difficult, our) show 
+72 396 moveto (London trading St. Thomas in his vestry, and add to boot St.) show 
+72 372 moveto (Martin and St. Hugh, have not within their hallowed limits more) show 
+72 348 moveto (vendible ware of all sorts ready made:  so that penury he never) show 
+72 324 moveto (need fear of pulpit provision, having where so plenteously to) show 
+72 300 moveto (refresh his magazine.  But if his rear and flanks be not impaled,) show 
+72 276 moveto (if his back door be not secured by the rigid licenser, but that a) show 
+72 252 moveto (bold book may now and then issue forth and give the assault to) show 
+72 228 moveto (some of his old collections in their trenches, it will concern) show 
+72 204 moveto (him then to keep waking, to stand in watch, to set good guards) show 
+72 180 moveto (and sentinels about his received opinions, to walk the round and) show 
+72 156 moveto (counter-round with his fellow inspectors, fearing lest any of his) show 
+72 132 moveto (flock be seduced, who also then would be better instructed,) show 
+72 108 moveto (better exercised and disciplined.  And God send that the fear of) show 
+72 84 moveto (this diligence, which must then be used, do not make us affect) show 
+page-end
+%%Page: 45 45
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/45) show 
+72 708 moveto (the laziness of a licensing Church.) show 
+72 684 moveto (     For if we be sure we are in the right, and do not hold the) show 
+72 660 moveto (truth guiltily, which becomes not, if we ourselves condemn not) show 
+72 636 moveto (our own weak and frivolous teaching, and the people for an) show 
+72 612 moveto (untaught and irreligious gadding rout, what can be more fair than) show 
+72 588 moveto (when a man judicious, learned, and of a conscience, for aught we) show 
+72 564 moveto (know, as good as theirs that taught us what we know, shall not) show 
+72 540 moveto (privily from house to house, which is more dangerous, but openly) show 
+72 516 moveto (by writing publish to the world what his opinion is, what his) show 
+72 492 moveto (reasons, and wherefore that which is now thought cannot be sound?) show 
+72 468 moveto (Christ urged it as wherewith to justify himself, that he preached) show 
+72 444 moveto (in public; yet writing is more public than preaching; and more) show 
+72 420 moveto (easy to refutation, if need be, there being so many whose) show 
+72 396 moveto (business and profession merely it is to be the champions of) show 
+72 372 moveto (truth; which if they neglect, what can be imputed but their) show 
+72 348 moveto (sloth, or unability?) show 
+72 324 moveto (     Thus much we are hindered and disinured by this course of) show 
+72 300 moveto (licensing, toward the true knowledge of what we seem to know.  For) show 
+72 276 moveto (how much it hurts and hinders the licensers themselves in the) show 
+72 252 moveto (calling of their ministry, more than any secular employment, if) show 
+72 228 moveto (they will discharge that office as they ought, so that of) show 
+72 204 moveto (necessity they must neglect either the one duty or the other, I) show 
+72 180 moveto (insist not, because it is a particular, but leave it to their own) show 
+72 156 moveto (conscience, how they will decide it there.) show 
+72 132 moveto (     There is yet behind of what I purposed to lay open, the) show 
+72 108 moveto (incredible loss and detriment that this plot of licensing puts us) show 
+72 84 moveto (to; more than if some enemy at sea should stop up all our havens) show 
+page-end
+%%Page: 46 46
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/46) show 
+72 708 moveto (and ports and creeks, it hinders and retards the importation of) show 
+72 684 moveto (our richest merchandise, truth; nay, it was first established and) show 
+72 660 moveto (put in practice by Antichristian malice and mystery on set) show 
+72 636 moveto (purpose to extinguish, if it were possible, the light of) show 
+72 612 moveto (Reformation, and to settle falsehood; little differing from that) show 
+72 588 moveto (policy wherewith the Turk upholds his Alcoran, by the prohibition) show 
+72 564 moveto (of printing.  'Tis not denied, but gladly confessed, we are to) show 
+72 540 moveto (send our thanks and vows to Heaven louder than most of nations,) show 
+72 516 moveto (for that great measure of truth which we enjoy, especially in) show 
+72 492 moveto (those main points between us and the Pope, with his appurtenances) show 
+72 468 moveto (the prelates:  but he who thinks we are to pitch our tent here,) show 
+72 444 moveto (and have attained the utmost prospect of reformation that the) show 
+72 420 moveto (mortal glass wherein we contemplate can show us, till we come to) show 
+72 396 moveto (beatific vision, that man by this very opinion declares that he) show 
+72 372 moveto (is yet far short of truth.) show 
+72 348 moveto (     Truth indeed came once into the world with her divine) show 
+72 324 moveto (Master, and was a perfect shape most glorious to look on:  but) show 
+72 300 moveto (when he ascended, and his Apostles after him were laid asleep,) show 
+72 276 moveto (then straight arose a wicked race of deceivers, who, as that) show 
+72 252 moveto (story goes of the Egyptian Typhon with his conspirators, how they) show 
+72 228 moveto (dealt with the good Osiris, took the virgin Truth, hewed her) show 
+72 204 moveto (lovely form into a thousand pieces, and scattered them to the) show 
+72 180 moveto (four winds.  From that time ever since, the sad friends of Truth,) show 
+72 156 moveto (such as durst appear, imitating the careful search that Isis made) show 
+72 132 moveto (for the mangled body of Osiris, went up and down gathering up) show 
+72 108 moveto (limb by limb, still as they could find them.  We have not yet) show 
+72 84 moveto (found them all, Lords and Commons, nor ever shall do, till her) show 
+page-end
+%%Page: 47 47
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/47) show 
+72 708 moveto (Master's second coming; he shall bring together every joint and) show 
+72 684 moveto (member, and shall mould them into an immortal feature of) show 
+72 660 moveto (loveliness and perfection.  Suffer not these licensing) show 
+72 636 moveto (prohibitions to stand at every place of opportunity, forbidding) show 
+72 612 moveto (and disturbing them that continue seeking, that continue to do) show 
+72 588 moveto (our obsequies to the torn body of our martyred saint.) show 
+72 564 moveto (     We boast our light; but if we look not wisely on the sun) show 
+72 540 moveto (itself, it smites us into darkness.  Who can discern those) show 
+72 516 moveto (planets that are oft combust, and those stars of brightest) show 
+72 492 moveto (magnitude that rise and set with the sun, until the opposite) show 
+72 468 moveto (motion of their orbs bring them to such a place in the firmament,) show 
+72 444 moveto (where they may be seen evening or morning?  The light which we) show 
+72 420 moveto (have gained was given us, not to be ever staring on, but by it to) show 
+72 396 moveto (discover onward things more remote from our knowledge.  It is not) show 
+72 372 moveto (the unfrocking of a priest, the unmitring of a bishop, and the) show 
+72 348 moveto (removing him from off the presbyterian shoulders, that will make) show 
+72 324 moveto (us a happy nation.  No, if other things as great in the Church,) show 
+72 300 moveto (and in the rule of life both economical and political, be not) show 
+72 276 moveto (looked into and reformed, we have looked so long upon the blaze) show 
+72 252 moveto (that Zuinglius and Calvin hath beaconed up to us, that we are) show 
+72 228 moveto (stark blind.  There be who perpetually complain of schisms and) show 
+72 204 moveto (sects, and make it such a calamity that any man dissents from) show 
+72 180 moveto (their maxims.  'Tis their own pride and ignorance which causes) show 
+72 156 moveto (the disturbing, who neither will hear with meekness, nor can) show 
+72 132 moveto (convince; yet all must be suppressed which is not found in their) show 
+72 108 moveto (Syntagma.  They are the troublers, they are the dividers of) show 
+72 84 moveto (unity, who neglect and permit not others to unite those) show 
+page-end
+%%Page: 48 48
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/48) show 
+72 708 moveto (dissevered pieces which are yet wanting to the body of Truth.  To) show 
+72 684 moveto (be still searching what we know not by what we know, still) show 
+72 660 moveto (closing up truth to truth as we find it \(for all her body is) show 
+72 636 moveto (homogeneal and proportional\), this is the golden rule in theology) show 
+72 612 moveto (as well as in arithmetic, and makes up the best harmony in a) show 
+72 588 moveto (Church; not the forced and outward union of cold, and neutral,) show 
+72 564 moveto (and inwardly divided minds.) show 
+72 540 moveto (     Lords and Commons of England!  consider what nation it is) show 
+72 516 moveto (whereof ye are, and whereof ye are the governors:  a nation not) show 
+72 492 moveto (slow and dull, but of a quick, ingenious and piercing spirit,) show 
+72 468 moveto (acute to invent, subtle and sinewy to discourse, not beneath the) show 
+72 444 moveto (reach of any point the highest that human capacity can soar to.) show 
+72 420 moveto (Therefore the studies of learning in her deepest sciences have) show 
+72 396 moveto (been so ancient and so eminent among us, that writers of good) show 
+72 372 moveto (antiquity and ablest judgment have been persuaded that even the) show 
+72 348 moveto (school of Pythagoras and the Persian wisdom took beginning from) show 
+72 324 moveto (the old philosophy of this island.  And that wise and civil) show 
+72 300 moveto (Roman, Julius Agricola, who governed once here for Caesar,) show 
+72 276 moveto (preferred the natural wits of Britain before the laboured studies) show 
+72 252 moveto (of the French.  Nor is it for nothing that the grave and frugal) show 
+72 228 moveto (Transylvanian sends out yearly from as far as the mountainous) show 
+72 204 moveto (borders of Russia, and beyond the Hercynian wilderness, not their) show 
+72 180 moveto (youth, but their staid men, to learn our language and our) show 
+72 156 moveto (theologic arts.) show 
+72 132 moveto (     Yet that which is above all this, the favour and the love of) show 
+72 108 moveto (Heaven, we have great argument to think in a peculiar manner) show 
+72 84 moveto (propitious and propending towards us.  Why else was this nation) show 
+page-end
+%%Page: 49 49
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/49) show 
+72 708 moveto (chosen before any other, that out of her, as out of Sion, should) show 
+72 684 moveto (be proclaimed and sounded forth the first tidings and trumpet of) show 
+72 660 moveto (Reformation to all Europe?  And had it not been the obstinate) show 
+72 636 moveto (perverseness of our prelates against the divine and admirable) show 
+72 612 moveto (spirit of Wickliff, to suppress him as a schismatic and) show 
+72 588 moveto (innovator, perhaps neither the Bohemian Huns and Jerome, no nor) show 
+72 564 moveto (the name of Luther or of Calvin, had been ever known:  the glory) show 
+72 540 moveto (of reforming all our neighbours had been completely ours.  But) show 
+72 516 moveto (now, as our obdurate clergy have with violence demeaned the) show 
+72 492 moveto (matter, we are become hitherto the latest and the backwardest) show 
+72 468 moveto (scholars, of whom God offered to have made us the teachers.  Now) show 
+72 444 moveto (once again by all concurrence of signs, and by the general) show 
+72 420 moveto (instinct of holy and devout men, as they daily and solemnly) show 
+72 396 moveto (express their thoughts, God is decreeing to begin some new and) show 
+72 372 moveto (great period in his Church, even to the reforming of Reformation) show 
+72 348 moveto (itself:  what does he then but reveal himself to his servants,) show 
+72 324 moveto (and as his manner is, first to his Englishmen?  I say, as his) show 
+72 300 moveto (manner is, first to us, though we mark not the method of his) show 
+72 276 moveto (counsels, and are unworthy.) show 
+72 252 moveto (     Behold now this vast city:  a city of refuge, the mansion) show 
+72 228 moveto (house of liberty, encompassed and surrounded with his protection;) show 
+72 204 moveto (the shop of war hath not there more anvils and hammers waking, to) show 
+72 180 moveto (fashion out the plates and instruments of armed justice in) show 
+72 156 moveto (defence of beleaguered truth, than there be pens and heads there,) show 
+72 132 moveto (sitting by their studious lamps, musing, searching, revolving new) show 
+72 108 moveto (notions and ideas wherewith to present, as with their homage and) show 
+72 84 moveto (their fealty, the approaching Reformation:  others as fast) show 
+page-end
+%%Page: 50 50
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/50) show 
+72 708 moveto (reading, trying all things, assenting to the force of reason and) show 
+72 684 moveto (convincement.  What could a man require more from a nation so) show 
+72 660 moveto (pliant and so prone to seek after knowledge?  What wants there to) show 
+72 636 moveto (such a towardly and pregnant soil, but wise and faithful) show 
+72 612 moveto (labourers, to make a knowing people, a nation of prophets, of) show 
+72 588 moveto (sages, and of worthies?  We reckon more than five months yet to) show 
+72 564 moveto (harvest; there need not be five weeks; had we but eyes to lift) show 
+72 540 moveto (up, the fields are white already.) show 
+72 516 moveto (     Where there is much desire to learn, there of necessity will) show 
+72 492 moveto (be much arguing, much writing, many opinions; for opinion in good) show 
+72 468 moveto (men is but knowledge in the making.  Under these fantastic) show 
+72 444 moveto (terrors of sect and schism, we wrong the earnest and zealous) show 
+72 420 moveto (thirst after knowledge and understanding which God hath stirred) show 
+72 396 moveto (up in this city.  What some lament of, we rather should rejoice) show 
+72 372 moveto (at, should rather praise this pious forwardness among men, to) show 
+72 348 moveto (reassume the ill-deputed care of their religion into their own) show 
+72 324 moveto (hands again.  A little generous prudence, a little forbearance of) show 
+72 300 moveto (one another, and some grain of charity might win all these) show 
+72 276 moveto (diligences to join, and unite in one general and brotherly search) show 
+72 252 moveto (after truth; could we but forgo this prelatical tradition of) show 
+72 228 moveto (crowding free consciences and Christian liberties into canons and) show 
+72 204 moveto (precepts of men.  I doubt not, if some great and worthy stranger) show 
+72 180 moveto (should come among us, wise to discern the mould and temper of a) show 
+72 156 moveto (people, and how to govern it, observing the high hopes and aims,) show 
+72 132 moveto (the diligent alacrity of our extended thoughts and reasonings in) show 
+72 108 moveto (the pursuance of truth and freedom, but that he would cry out as) show 
+72 84 moveto (Pyrrhus did, admiring the Roman docility and courage:  If such) show 
+page-end
+%%Page: 51 51
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/51) show 
+72 708 moveto (were my Epirots, I would not despair the greatest design that) show 
+72 684 moveto (could be attempted, to make a Church or kingdom happy.) show 
+72 660 moveto (     Yet these are the men cried out against for schismatics and) show 
+72 636 moveto (sectaries; as if, while the temple of the Lord was building, some) show 
+72 612 moveto (cutting, some squaring the marble, others hewing the cedars,) show 
+72 588 moveto (there should be a sort of irrational men who could not consider) show 
+72 564 moveto (there must be many schisms and many dissections made in the) show 
+72 540 moveto (quarry and in the timber, ere the house of God can be built.  And) show 
+72 516 moveto (when every stone is laid artfully together, it cannot be united) show 
+72 492 moveto (into a continuity, it can but be contiguous in this world;) show 
+72 468 moveto (neither can every piece of the building be of one form; nay) show 
+72 444 moveto (rather the perfection consists in this, that, out of many) show 
+72 420 moveto (moderate varieties and brotherly dissimilitudes that are not) show 
+72 396 moveto (vastly disproportional, arises the goodly and the graceful) show 
+72 372 moveto (symmetry that commends the whole pile and structure.) show 
+72 348 moveto (     Let us therefore be more considerate builders, more wise in) show 
+72 324 moveto (spiritual architecture, when great reformation is expected.  For) show 
+72 300 moveto (now the time seems come, wherein Moses the great prophet may sit) show 
+72 276 moveto (in heaven rejoicing to see that memorable and glorious wish of) show 
+72 252 moveto (his fulfilled, when not only our seventy elders, but all the) show 
+72 228 moveto (Lord's people, are become prophets.  No marvel then though some) show 
+72 204 moveto (men, and some good men too perhaps, but young in goodness, as) show 
+72 180 moveto (Joshua then was, envy them.  They fret, and out of their own) show 
+72 156 moveto (weakness are in agony, lest these divisions and subdivisions will) show 
+72 132 moveto (undo us.  The adversary again applauds, and waits the hour:  when) show 
+72 108 moveto (they have branched themselves out, saith he, small enough into) show 
+72 84 moveto (parties and partitions, then will be our time.  Fool!  he sees) show 
+page-end
+%%Page: 52 52
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/52) show 
+72 708 moveto (not the firm root, out of which we all grow, though into) show 
+72 684 moveto (branches:  nor will beware until he see our small divided) show 
+72 660 moveto (maniples cutting through at every angle of his ill-united and) show 
+72 636 moveto (unwieldy brigade.  And that we are to hope better of all these) show 
+72 612 moveto (supposed sects and schisms, and that we shall not need that) show 
+72 588 moveto (solicitude, honest perhaps, though over-timorous, of them that) show 
+72 564 moveto (vex in this behalf, but shall laugh in the end at those malicious) show 
+72 540 moveto (applauders of our differences, I have these reasons to persuade) show 
+72 516 moveto (me.) show 
+72 492 moveto (     First, when a city shall be as it were besieged and blocked) show 
+72 468 moveto (about, her navigable river infested, inroads and incursions) show 
+72 444 moveto (round, defiance and battle oft rumoured to be marching up even to) show 
+72 420 moveto (her walls and suburb trenches, that then the people, or the) show 
+72 396 moveto (greater part, more than at other times, wholly taken up with the) show 
+72 372 moveto (study of highest and most important matters to be reformed,) show 
+72 348 moveto (should be disputing, reasoning, reading, inventing, discoursing,) show 
+72 324 moveto (even to a rarity and admiration, things not before discoursed or) show 
+72 300 moveto (written of, argues first a singular goodwill, contentedness and) show 
+72 276 moveto (confidence in your prudent foresight and safe government, Lords) show 
+72 252 moveto (and Commons; and from thence derives itself to a gallant bravery) show 
+72 228 moveto (and well-grounded contempt of their enemies, as if there were no) show 
+72 204 moveto (small number of as great spirits among us, as his was, who when) show 
+72 180 moveto (Rome was nigh besieged by Hannibal, being in the city, bought) show 
+72 156 moveto (that piece of ground at no cheap rate, whereon Hannibal himself) show 
+72 132 moveto (encamped his own regiment.) show 
+72 108 moveto (     Next, it is a lively and cheerful presage of our happy) show 
+72 84 moveto (success and victory.  For as in a body, when the blood is fresh,) show 
+page-end
+%%Page: 53 53
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/53) show 
+72 708 moveto (the spirits pure and vigorous, not only to vital but to rational) show 
+72 684 moveto (faculties, and those in the acutest and the pertest operations of) show 
+72 660 moveto (wit and subtlety, it argues in what good plight and constitution) show 
+72 636 moveto (the body is; so when the cheerfulness of the people is so) show 
+72 612 moveto (sprightly up, as that it has not only wherewith to guard well its) show 
+72 588 moveto (own freedom and safety, but to spare, and to bestow upon the) show 
+72 564 moveto (solidest and sublimest points of controversy and new invention,) show 
+72 540 moveto (it betokens us not degenerated, nor drooping to a fatal decay,) show 
+72 516 moveto (but casting off the old and wrinkled skin of corruption to) show 
+72 492 moveto (outlive these pangs and wax young again, entering the glorious) show 
+72 468 moveto (ways of truth and prosperous virtue, destined to become great and) show 
+72 444 moveto (honourable in these latter ages.  Methinks I see in my mind a) show 
+72 420 moveto (noble and puissant nation rousing herself like a strong man after) show 
+72 396 moveto (sleep, and shaking her invincible locks:  methinks I see her as) show 
+72 372 moveto (an eagle mewing her mighty youth, and kindling her undazzled eyes) show 
+72 348 moveto (at the full midday beam; purging and unscaling her long-abused) show 
+72 324 moveto (sight at the fountain itself of heavenly radiance; while the) show 
+72 300 moveto (whole noise of timorous and flocking birds, with those also that) show 
+72 276 moveto (love the twilight, flutter about, amazed at what she means, and) show 
+72 252 moveto (in their envious gabble would prognosticate a year of sects and) show 
+72 228 moveto (schisms.) show 
+72 204 moveto (     What would ye do then?  should ye suppress all this flowery) show 
+72 180 moveto (crop of knowledge and new light sprung up and yet springing daily) show 
+72 156 moveto (in this city?  Should ye set an oligarchy of twenty engrossers) show 
+72 132 moveto (over it, to bring a famine upon our minds again, when we shall) show 
+72 108 moveto (know nothing but what is measured to us by their bushel?  Believe) show 
+72 84 moveto (it, Lords and Commons, they who counsel ye to such a suppressing) show 
+page-end
+%%Page: 54 54
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/54) show 
+72 708 moveto (do as good as bid ye suppress yourselves; and I will soon show) show 
+72 684 moveto (how.  If it be desired to know the immediate cause of all this) show 
+72 660 moveto (free writing and free speaking, there cannot be assigned a truer) show 
+72 636 moveto (than your own mild and free and humane government.  It is the) show 
+72 612 moveto (liberty, Lords and Commons, which your own valorous and happy) show 
+72 588 moveto (counsels have purchased us, liberty which is the nurse of all) show 
+72 564 moveto (great wits; this is that which hath rarefied and enlightened our) show 
+72 540 moveto (spirits like the influence of heaven; this is that which hath) show 
+72 516 moveto (enfranchised, enlarged and lifted up our apprehensions, degrees) show 
+72 492 moveto (above themselves.) show 
+72 468 moveto (     Ye cannot make us now less capable, less knowing, less) show 
+72 444 moveto (eagerly pursuing of the truth, unless ye first make yourselves,) show 
+72 420 moveto (that made us so, less the lovers, less the founders of our true) show 
+72 396 moveto (liberty.  We can grow ignorant again, brutish, formal and) show 
+72 372 moveto (slavish, as ye found us; but you then must first become that) show 
+72 348 moveto (which ye cannot be, oppressive, arbitrary and tyrannous, as they) show 
+72 324 moveto (were from whom ye have freed us.  That our hearts are now more) show 
+72 300 moveto (capacious, our thoughts more erected to the search and) show 
+72 276 moveto (expectation of greatest and exactest things, is the issue of your) show 
+72 252 moveto (own virtue propagated in us; ye cannot suppress that, unless ye) show 
+72 228 moveto (reinforce an abrogated and merciless law, that fathers may) show 
+72 204 moveto (dispatch at will their own children.  And who shall then stick) show 
+72 180 moveto (closest to ye, and excite others?  not he who takes up arms for) show 
+72 156 moveto (coat and conduct, and his four nobles of Danegelt.  Although I) show 
+72 132 moveto (dispraise not the defence of just immunities, yet love my peace) show 
+72 108 moveto (better, if that were all.  Give me the liberty to know, to utter,) show 
+72 84 moveto (and to argue freely according to conscience, above all liberties.) show 
+page-end
+%%Page: 55 55
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/55) show 
+72 708 moveto (     What would be best advised, then, if it be found so hurtful) show 
+72 684 moveto (and so unequal to suppress opinions for the newness or the) show 
+72 660 moveto (unsuitableness to a customary acceptance, will not be my task to) show 
+72 636 moveto (say.  I only shall repeat what I have learned from one of your) show 
+72 612 moveto (own honourable number, a right noble and pious lord, who, had he) show 
+72 588 moveto (not sacrificed his life and fortunes to the Church and) show 
+72 564 moveto (Commonwealth, we had not now missed and bewailed a worthy and) show 
+72 540 moveto (undoubted patron of this argument.  Ye know him, I am sure; yet I) show 
+72 516 moveto (for honour's sake, and may it be eternal to him, shall name him,) show 
+72 492 moveto (the Lord Brook.  He writing of episcopacy, and by the way) show 
+72 468 moveto (treating of sects and schisms, left ye his vote, or rather now) show 
+72 444 moveto (the last words of his dying charge, which I know will ever be of) show 
+72 420 moveto (dear and honoured regard with ye, so full of meekness and) show 
+72 396 moveto (breathing charity, that next to his last testament, who) show 
+72 372 moveto (bequeathed love and peace to his disciples, I cannot call to mind) show 
+72 348 moveto (where I have read or heard words more mild and peaceful.  He) show 
+72 324 moveto (there exhorts us to hear with patience and humility those,) show 
+72 300 moveto (however they be miscalled, that desire to live purely, in such a) show 
+72 276 moveto (use of God's ordinances, as the best guidance of their conscience) show 
+72 252 moveto (gives them, and to tolerate them, though in some disconformity to) show 
+72 228 moveto (ourselves.  The book itself will tell us more at large, being) show 
+72 204 moveto (published to the world, and dedicated to the Parliament by him) show 
+72 180 moveto (who, both for his life and for his death, deserves that what) show 
+72 156 moveto (advice he left be not laid by without perusal.) show 
+72 132 moveto (     And now the time in special is, by privilege to write and) show 
+72 108 moveto (speak what may help to the further discussing of matters in) show 
+72 84 moveto (agitation.  The temple of Janus with his two controversial faces) show 
+page-end
+%%Page: 56 56
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/56) show 
+72 708 moveto (might now not unsignificantly be set open.  And though all the) show 
+72 684 moveto (winds of doctrine were let loose to play upon the earth, so Truth) show 
+72 660 moveto (be in the field, we do injuriously, by licensing and prohibiting,) show 
+72 636 moveto (to misdoubt her strength.  Let her and Falsehood grapple; who) show 
+72 612 moveto (ever knew Truth put to the worse, in a free and open encounter?) show 
+72 588 moveto (Her confuting is the best and surest suppressing.  He who hears) show 
+72 564 moveto (what praying there is for light and clearer knowledge to be sent) show 
+72 540 moveto (down among us, would think of other matters to be constituted) show 
+72 516 moveto (beyond the discipline of Geneva, framed and fabricked already to) show 
+72 492 moveto (our hands.  Yet when the new light which we beg for shines in) show 
+72 468 moveto (upon us, there be who envy and oppose, if it come not first in at) show 
+72 444 moveto (their casements.  What a collusion is this, whenas we are) show 
+72 420 moveto (exhorted by the wise man to use diligence, to seek for wisdom as) show 
+72 396 moveto (for hidden treasures early and late, that another order shall) show 
+72 372 moveto (enjoin us to know nothing but by statute?  When a man hath been) show 
+72 348 moveto (labouring the hardest labour in the deep mines of knowledge, hath) show 
+72 324 moveto (furnished out his findings in all their equipage:  drawn forth) show 
+72 300 moveto (his reasons as it were a battle ranged:  scattered and defeated) show 
+72 276 moveto (all objections in his way; calls out his adversary into the) show 
+72 252 moveto (plain, offers him the advantage of wind and sun, if he please,) show 
+72 228 moveto (only that he may try the matter by dint of argument:  for his) show 
+72 204 moveto (opponents then to skulk, to lay ambushments, to keep a narrow) show 
+72 180 moveto (bridge of licensing where the challenger should pass, though it) show 
+72 156 moveto (be valour enough in soldiership, is but weakness and cowardice in) show 
+72 132 moveto (the wars of Truth.) show 
+72 108 moveto (     For who knows not that Truth is strong, next to the) show 
+72 84 moveto (Almighty?  She needs no policies, nor stratagems, nor licensings) show 
+page-end
+%%Page: 57 57
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/57) show 
+72 708 moveto (to make her victorious; those are the shifts and the defences) show 
+72 684 moveto (that error uses against her power.  Give her but room, and do not) show 
+72 660 moveto (bind her when she sleeps, for then she speaks not true, as the) show 
+72 636 moveto (old Proteus did, who spake oracles only when he was caught and) show 
+72 612 moveto (bound, but then rather she turns herself into all shapes, except) show 
+72 588 moveto (her own, and perhaps tunes her voice according to the time, as) show 
+72 564 moveto (Micaiah did before Ahab, until she be adjured into her own) show 
+72 540 moveto (likeness.  Yet is it not impossible that she may have more shapes) show 
+72 516 moveto (than one.  What else is all that rank of things indifferent,) show 
+72 492 moveto (wherein Truth may be on this side or on the other, without being) show 
+72 468 moveto (unlike herself?  What but a vain shadow else is the abolition of) show 
+72 444 moveto (those ordinances, that hand-writing nailed to the cross?  What) show 
+72 420 moveto (great purchase is this Christian liberty which Paul so often) show 
+72 396 moveto (boasts of?  His doctrine is, that he who eats or eats not,) show 
+72 372 moveto (regards a day or regards it not, may do either to the Lord.  How) show 
+72 348 moveto (many other things might be tolerated in peace, and left to) show 
+72 324 moveto (conscience, had we but charity, and were it not the chief) show 
+72 300 moveto (stronghold of our hypocrisy to be ever judging one another?) show 
+72 276 moveto (     I fear yet this iron yoke of outward conformity hath left a) show 
+72 252 moveto (slavish print upon our necks; the ghost of a linen decency yet) show 
+72 228 moveto (haunts us.  We stumble and are impatient at the least dividing of) show 
+72 204 moveto (one visible congregation from another, though it be not in) show 
+72 180 moveto (fundamentals; and through our forwardness to suppress, and our) show 
+72 156 moveto (backwardness to recover any enthralled piece of truth out of the) show 
+72 132 moveto (gripe of custom, we care not to keep truth separated from truth,) show 
+72 108 moveto (which is the fiercest rent and disunion of all.  We do not see) show 
+72 84 moveto (that, while we still affect by all means a rigid external) show 
+page-end
+%%Page: 58 58
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/58) show 
+72 708 moveto (formality, we may as soon fall again into a gross conforming) show 
+72 684 moveto (stupidity, a stark and dead congealment of wood and hay and) show 
+72 660 moveto (stubble, forced and frozen together, which is more to the sudden) show 
+72 636 moveto (degenerating of a Church than many subdichotomies of petty) show 
+72 612 moveto (schisms.) show 
+72 588 moveto (     Not that I can think well of every light separation, or that) show 
+72 564 moveto (all in a Church is to be expected gold and silver and precious) show 
+72 540 moveto (stones:  it is not possible for man to sever the wheat from the) show 
+72 516 moveto (tares, the good fish from the other fry; that must be the Angels') show 
+72 492 moveto (ministry at the end of mortal things.  Yet if all cannot be of) show 
+72 468 moveto (one mind--as who looks they should be?--this doubtless is more) show 
+72 444 moveto (wholesome, more prudent, and more Christian, that many be) show 
+72 420 moveto (tolerated, rather than all compelled.  I mean not tolerated) show 
+72 396 moveto (popery, and open superstition, which, as it extirpates all) show 
+72 372 moveto (religions and civil supremacies, so itself should be extirpate,) show 
+72 348 moveto (provided first that all charitable and compassionate means be) show 
+72 324 moveto (used to win and regain the weak and the misled:  that also which) show 
+72 300 moveto (is impious or evil absolutely either against faith or manners no) show 
+72 276 moveto (law can possibly permit, that intends not to unlaw itself:  but) show 
+72 252 moveto (those neighbouring differences, or rather indifferences, are what) show 
+72 228 moveto (I speak of, whether in some point of doctrine or of discipline,) show 
+72 204 moveto (which, though they may be many, yet need not interrupt THE UNITY) show 
+72 180 moveto (OF SPIRIT, if we could but find among us THE BOND OF PEACE.) show 
+72 156 moveto (     In the meanwhile if any one would write, and bring his) show 
+72 132 moveto (helpful hand to the slow-moving Reformation which we labour) show 
+72 108 moveto (under, if Truth have spoken to him before others, or but seemed) show 
+72 84 moveto (at least to speak, who hath so bejesuited us that we should) show 
+page-end
+%%Page: 59 59
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/59) show 
+72 708 moveto (trouble that man with asking license to do so worthy a deed?  and) show 
+72 684 moveto (not consider this, that if it come to prohibiting, there is not) show 
+72 660 moveto (aught more likely to be prohibited than truth itself; whose first) show 
+72 636 moveto (appearance to our eyes, bleared and dimmed with prejudice and) show 
+72 612 moveto (custom, is more unsightly and unplausible than many errors, even) show 
+72 588 moveto (as the person is of many a great man slight and contemptuous to) show 
+72 564 moveto (see to.  And what do they tell us vainly of new opinions, when) show 
+72 540 moveto (this very opinion of theirs, that none must be heard but whom) show 
+72 516 moveto (they like, is the worst and newest opinion of all others; and is) show 
+72 492 moveto (the chief cause why sects and schisms do so much abound, and true) show 
+72 468 moveto (knowledge is kept at distance from us; besides yet a greater) show 
+72 444 moveto (danger which is in it.) show 
+72 420 moveto (     For when God shakes a kingdom with strong and healthful) show 
+72 396 moveto (commotions to a general reforming, 'tis not untrue that many) show 
+72 372 moveto (sectaries and false teachers are then busiest in seducing; but) show 
+72 348 moveto (yet more true it is, that God then raises to his own work men of) show 
+72 324 moveto (rare abilities, and more than common industry, not only to look) show 
+72 300 moveto (back and revise what hath been taught heretofore, but to gain) show 
+72 276 moveto (further and go on some new enlightened steps in the discovery of) show 
+72 252 moveto (truth.  For such is the order of God's enlightening his Church,) show 
+72 228 moveto (to dispense and deal out by degrees his beam, so as our earthly) show 
+72 204 moveto (eyes may best sustain it.) show 
+72 180 moveto (     Neither is God appointed and confined, where and out of what) show 
+72 156 moveto (place these his chosen shall be first heard to speak; for he sees) show 
+72 132 moveto (not as man sees, chooses not as man chooses, lest we should) show 
+72 108 moveto (devote ourselves again to set places, and assemblies, and outward) show 
+72 84 moveto (callings of men; planting our faith one while in the old) show 
+page-end
+%%Page: 60 60
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/60) show 
+72 708 moveto (Convocation house, and another while in the Chapel at) show 
+72 684 moveto (Westminster; when all the faith and religion that shall be there) show 
+72 660 moveto (canonized is not sufficient without plain convincement, and the) show 
+72 636 moveto (charity of patient instruction to supple the least bruise of) show 
+72 612 moveto (conscience, to edify the meanest Christian, who desires to walk) show 
+72 588 moveto (in the Spirit, and not in the letter of human trust, for all the) show 
+72 564 moveto (number of voices that can be there made; no, though Harry VII) show 
+72 540 moveto (himself there, with all his liege tombs about him, should lend) show 
+72 516 moveto (them voices from the dead, to swell their number.) show 
+72 492 moveto (     And if the men be erroneous who appear to be the leading) show 
+72 468 moveto (schismatics, what withholds us but our sloth, our self-will, and) show 
+72 444 moveto (distrust in the right cause, that we do not give them gentle) show 
+72 420 moveto (meetings and gentle dismissions, that we debate not and examine) show 
+72 396 moveto (the matter thoroughly with liberal and frequent audience; if not) show 
+72 372 moveto (for their sakes, yet for our own?  seeing no man who hath tasted) show 
+72 348 moveto (learning, but will confess the many ways of profiting by those) show 
+72 324 moveto (who, not contented with stale receipts, are able to manage and) show 
+72 300 moveto (set forth new positions to the world.  And were they but as the) show 
+72 276 moveto (dust and cinders of our feet, so long as in that notion they may) show 
+72 252 moveto (yet serve to polish and brighten the armoury of Truth, even for) show 
+72 228 moveto (that respect they were not utterly to be cast away.  But if they) show 
+72 204 moveto (be of those whom God hath fitted for the special use of these) show 
+72 180 moveto (times with eminent and ample gifts, and those perhaps neither) show 
+72 156 moveto (among the priests nor among the Pharisees, and we in the haste of) show 
+72 132 moveto (a precipitant zeal shall make no distinction, but resolve to stop) show 
+72 108 moveto (their mouths, because we fear they come with new and dangerous) show 
+72 84 moveto (opinions, as we commonly forejudge them ere we understand them;) show 
+page-end
+%%Page: 61 61
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/61) show 
+72 708 moveto (no less than woe to us, while, thinking thus to defend the) show 
+72 684 moveto (Gospel, we are found the persecutors.) show 
+72 660 moveto (     There have been not a few since the beginning of this) show 
+72 636 moveto (Parliament, both of the presbytery and others, who by their) show 
+72 612 moveto (unlicensed books, to the contempt of an Imprimatur, first broke) show 
+72 588 moveto (that triple ice clung about our hearts, and taught the people to) show 
+72 564 moveto (see day:  I hope that none of those were the persuaders to renew) show 
+72 540 moveto (upon us this bondage which they themselves have wrought so much) show 
+72 516 moveto (good by contemning.  But if neither the check that Moses gave to) show 
+72 492 moveto (young Joshua, nor the countermand which our Saviour gave to young) show 
+72 468 moveto (John, who was so ready to prohibit those whom he thought) show 
+72 444 moveto (unlicensed, be not enough to admonish our elders how unacceptable) show 
+72 420 moveto (to God their testy mood of prohibiting is; if neither their own) show 
+72 396 moveto (remembrance what evil hath abounded in the Church by this set of) show 
+72 372 moveto (licensing, and what good they themselves have begun by) show 
+72 348 moveto (transgressing it, be not enough, but that they will persuade and) show 
+72 324 moveto (execute the most Dominican part of the Inquisition over us, and) show 
+72 300 moveto (are already with one foot in the stirrup so active at) show 
+72 276 moveto (suppressing, it would be no unequal distribution in the first) show 
+72 252 moveto (place to suppress the suppressors themselves:  whom the change of) show 
+72 228 moveto (their condition hath puffed up, more than their late experience) show 
+72 204 moveto (of harder times hath made wise.) show 
+72 180 moveto (     And as for regulating the press, let no man think to have) show 
+72 156 moveto (the honour of advising ye better than yourselves have done in) show 
+72 132 moveto (that Order published next before this, "that no book be printed,) show 
+72 108 moveto (unless the printer's and the author's name, or at least the) show 
+72 84 moveto (printer's, be registered." Those which otherwise come forth, if) show 
+page-end
+%%Page: 62 62
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/62) show 
+72 708 moveto (they be found mischievous and libellous, the fire and the) show 
+72 684 moveto (executioner will be the timeliest and the most effectual remedy) show 
+72 660 moveto (that man's prevention can use.  For this authentic Spanish policy) show 
+72 636 moveto (of licensing books, if I have said aught, will prove the most) show 
+72 612 moveto (unlicensed book itself within a short while; and was the) show 
+72 588 moveto (immediate image of a Star Chamber decree to that purpose made in) show 
+72 564 moveto (those very times when that Court did the rest of those her pious) show 
+72 540 moveto (works, for which she is now fallen from the stars with Lucifer.) show 
+72 516 moveto (Whereby ye may guess what kind of state prudence, what love of) show 
+72 492 moveto (the people, what care of religion or good manners there was at) show 
+72 468 moveto (the contriving, although with singular hypocrisy it pretended to) show 
+72 444 moveto (bind books to their good behaviour.  And how it got the upper) show 
+72 420 moveto (hand of your precedent Order so well constituted before, if we) show 
+72 396 moveto (may believe those men whose profession gives them cause to) show 
+72 372 moveto (inquire most, it may be doubted there was in it the fraud of some) show 
+72 348 moveto (old patentees and monopolizers in the trade of bookselling; who) show 
+72 324 moveto (under pretence of the poor in their Company not to be defrauded,) show 
+72 300 moveto (and the just retaining of each man his several copy, which God) show 
+72 276 moveto (forbid should be gainsaid, brought divers glossing colours to the) show 
+72 252 moveto (House, which were indeed but colours, and serving to no end) show 
+72 228 moveto (except it be to exercise a superiority over their neighbours; men) show 
+72 204 moveto (who do not therefore labour in an honest profession to which) show 
+72 180 moveto (learning is indebted, that they should be made other men's) show 
+72 156 moveto (vassals.  Another end is thought was aimed at by some of them in) show 
+72 132 moveto (procuring by petition this Order, that, having power in their) show 
+72 108 moveto (hands, malignant books might the easier scape abroad, as the) show 
+72 84 moveto (event shows.) show 
+page-end
+%%Page: 63 63
+page-begin
+72 744 moveto (MILTON) show (/) show (AREOPAGITICA) show (/63) show 
+72 708 moveto (     But of these sophisms and elenchs of merchandise I skill) show 
+72 684 moveto (not.  This I know, that errors in a good government and in a bad) show 
+72 660 moveto (are equally almost incident; for what magistrate may not be) show 
+72 636 moveto (misinformed, and much the sooner, if liberty of printing be) show 
+72 612 moveto (reduced into the power of a few?  But to redress willingly and) show 
+72 588 moveto (speedily what hath been erred, and in highest authority to esteem) show 
+72 564 moveto (a plain advertisement more than others have done a sumptuous) show 
+72 540 moveto (bride, is a virtue \(honoured Lords and Commons\) answerable to) show 
+72 516 moveto (your highest actions, and whereof none can participate but) show 
+72 492 moveto (greatest and wisest men.) show 
+page-end
+%%Trailer
