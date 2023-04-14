@@ -57,7 +57,7 @@ $ head -6 conrad.ps
 $
 ```
 
-Output: [`conrad.ps`]
+Output: [`conrad.pdf`]
 
 Kosik can also show you its internal element representation using
 the <tt>-e</tt> flag, and it works on fragments of the manuscript
@@ -97,4 +97,4 @@ If you don't use either the <tt>-e</tt> nor the <tt>-e</tt> flags,
 Kosik will render the individual element in Postscript.  In all
 cases, a single top-level element is expected.
 
-[`conrad.ps`]: <http://www.matchlock.com/kosik/conrad.ps>
+[`conrad.pdf`]: <http://www.matchlock.com/kosik/conrad.pdf>
