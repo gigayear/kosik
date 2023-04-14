@@ -72,7 +72,7 @@
 //! $
 //! ```
 //!
-//! Output: [`conrad.ps`]
+//! Output: [`conrad.pdf`]
 //!
 //! Kosik can also show you its internal element representation using
 //! the <tt>-e</tt> flag, and it works on fragments of the manuscript
@@ -112,7 +112,7 @@
 //! Kosik will render the individual element in Postscript.  In all
 //! cases, a single top-level element is expected.
 //!
-//! [`conrad.ps`]: <http://www.matchlock.com/kosik/conrad.ps>
+//! [`conrad.pdf`]: <http://www.matchlock.com/kosik/conrad.pdf>
 
 use std::env;
 use std::error::Error;
@@ -190,7 +190,6 @@ impl From<&str> for Arguments {
 /// # Examples
 ///
 /// ```rust,no_run
-/// # use std::path::PathBuf;
 /// let args = kosik::Arguments::from("dummy.sik");
 /// let root = kosik::read(&args).unwrap();
 /// ```
@@ -209,8 +208,7 @@ mod fragments;
 /// # Examples
 ///
 /// ```rust,no_run
-/// # use std::path::PathBuf;
-/// # let args = kosik::Arguments::from("test.sik");
+/// # let args = kosik::Arguments::from("dummy.sik");
 /// let root = kosik::read(&args).unwrap();
 /// kosik::write(root, &args);
 /// ```

@@ -391,7 +391,9 @@ pub struct PageBreak {}
 /// <person><gn>Joseph</gn><sn>Conrad</sn></person>
 /// ```
 /// 
-/// > Output: <code>Joseph Conrad</code>
+/// Output:
+///
+/// <pre>Joseph Conrad</pre>
 ///
 /// Full boat:
 ///
@@ -406,7 +408,8 @@ pub struct PageBreak {}
 /// </person>
 /// ```
 /// 
-/// > Output: <code>Dr. Martin Luther King, Jr.<sup>*×</sup></code>
+/// Output:
+/// <pre>Dr. Martin Luther King, Jr.<sup>*×</sup></pre>
 #[derive(Debug)]
 pub struct Person {}
 
@@ -500,11 +503,12 @@ pub struct Chapter {
 /// ```
 ///
 /// Output:
-/// ```text
+///
+/// <pre>
 /// MATCHLOCK PRESS
 /// P.O. Box 90606
 /// Brooklyn, NY 11209
-/// ```
+/// </pre>
 #[derive(Debug)]
 pub struct Contact {
     /// Defaults to <tt>single</tt>, but may be overridden by an XML

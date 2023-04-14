@@ -432,7 +432,7 @@ impl<'a> Reader<'a> {
     /// # Examples
     ///
     /// ```
-    /// # use kosik::document::reader::Reader;
+    /// use kosik::document::reader::Reader;
     /// let reader = Reader::new("<em>Ulysses</em>");
     /// assert!(reader.root.is_none());
     /// ```

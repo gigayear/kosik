@@ -414,7 +414,7 @@ pub fn linebreak_fill(tokens: &[TokenType], line_length: usize) -> Vec<Line> {
     lines
 }
 
-/// Breaks a token list into lines to fill a text block
+/// Breaks a token list into lines that are centered on the page
 ///
 /// # Examples
 ///
@@ -427,7 +427,6 @@ pub fn linebreak_fill(tokens: &[TokenType], line_length: usize) -> Vec<Line> {
 /// let lines = linebreak_balance(&tokens[..], 6);
 /// assert_eq!(lines.len(), 2);
 /// ```
-/// Breaks a token list into lines that will be centered on the page
 pub fn linebreak_balance(tokens: &[TokenType], line_length: usize) -> Vec<Line> {
     let text_length: usize = tokens.iter().fold(0, |sum, token| sum + token.length());
     let height = text_length / line_length + 1;
