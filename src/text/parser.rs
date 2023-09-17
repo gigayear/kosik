@@ -418,7 +418,7 @@ impl StateMachine {
                     '\u{005f}' |    // Low line
                     '\u{0060}' |    // Grave accent
                     '\u{007c}' |    // Vertical bar
-                    '\u{007e}' |    // Tilde
+                    '\u{007e}' |    // Tilde (Non-breaking space)
                     '\u{00a2}' |    // Cent sign
                     '\u{00a3}' |    // Pound sign
                     '\u{00a5}' |    // Yen sign
@@ -453,6 +453,10 @@ impl StateMachine {
             },
             StateMachine::Symbol(mut state) => {
                 match ch {
+                    '\u{007e}' => { // Tilde (Non-breaking space)
+                        state.data.text.push_str(" ");
+                        (StateMachine::Scan(state.into()), true)
+                    },
                     '\u{0022}' |    // Quotation mark
                     '\u{0023}' |    // Number sign
                     '\u{0024}' |    // Dollar sign
@@ -469,7 +473,6 @@ impl StateMachine {
                     '\u{005f}' |    // Low line
                     '\u{0060}' |    // Grave accent
                     '\u{007c}' |    // Vertical bar
-                    '\u{007e}' |    // Tilde
                     '\u{00a2}' |    // Cent sign
                     '\u{00a3}' |    // Pound sign
                     '\u{00a5}' |    // Yen sign
@@ -591,6 +594,15 @@ impl From<State<EscapeData>> for State<ScanData> {
                 state.tokens.push(TokenType::Symbol(Token {
                     data: SymbolData {
                         text: "\\".to_string(),
+                    },
+                    dpy: state.dpy,
+                    frm: state.frm,
+                }));
+            },
+            "~" => {
+                state.tokens.push(TokenType::Symbol(Token {
+                    data: SymbolData {
+                        text: "~".to_string(),
                     },
                     dpy: state.dpy,
                     frm: state.frm,

@@ -241,6 +241,7 @@ pub struct CloseData {
 /// |       | <tt>U+000a</tt> | Line feed      | <tt>0x0a</tt>      |
 /// |       | <tt>U+0020</tt> | Space          | <tt>0x20</tt>      |
 /// | \     | <tt>U+005c</tt> | Backslash      | <tt>0x5c</tt>      |
+/// | ~     | <tt>U+007e</tt> | Tilde          | <tt>0x7e</tt>      |
 #[derive(Debug, Clone)]
 pub struct EscapeData {
     /// Stores a space character or a backslash
@@ -301,11 +302,11 @@ pub struct PunctData {
 
 /// Space characters
 ///
-/// | Glyph | UTF-8 Code      | Description    | Latin-9 Equivalent |
-/// | ----- | --------------- | -------------- | ------------------ |
-/// |       | <tt>U+0009</tt> | Horizontal tab | <tt>0x09</tt>      |
-/// |       | <tt>U+000a</tt> | Line feed      | <tt>0x0a</tt>      |
-/// |       | <tt>U+0020</tt> | Space          | <tt>0x20</tt>      |
+/// | Glyph | UTF-8 Code      | Description        | Latin-9 Equivalent |
+/// | ----- | --------------- | ------------------ | ------------------ |
+/// |       | <tt>U+0009</tt> | Horizontal tab     | <tt>0x09</tt>      |
+/// |       | <tt>U+000a</tt> | Line feed          | <tt>0x0a</tt>      |
+/// |       | <tt>U+0020</tt> | Space              | <tt>0x20</tt>      |
 #[derive(Debug, Clone)]
 pub struct SpaceData {
     /// Stores any number of space characters.
@@ -322,41 +323,41 @@ impl From<usize> for SpaceData {
 
 /// Symbol characters
 ///
-/// | Glyph | UTF-8 Code      | Description         | Latin-9 Equivalent |
-/// | ----- | --------------- | ------------------- | ------------------ |
-/// | "     | <tt>U+0022</tt> | Quotation mark      | <tt>0x22</tt>      |
-/// | #     | <tt>U+0023</tt> | Number sign         | <tt>0x23</tt>      |
-/// | $     | <tt>U+0024</tt> | Dollar sign         | <tt>0x24</tt>      |
-/// | %     | <tt>U+0025</tt> | Percent sign        | <tt>0x25</tt>      |
-/// | &     | <tt>U+0026</tt> | Ampersand           | <tt>0x26</tt>      |
-/// | *     | <tt>U+002a</tt> | Asterisk            | <tt>0x2a</tt>      |
-/// | +     | <tt>U+002b</tt> | Plus sign           | <tt>0x2b</tt>      |
-/// | /     | <tt>U+002f</tt> | Slash               | <tt>0x2f</tt>      |
-/// | <     | <tt>U+003c</tt> | Less-than sign      | <tt>0x3c</tt>      |
-/// | =     | <tt>U+003d</tt> | Equal sign          | <tt>0x3d</tt>      |
-/// | >     | <tt>U+003e</tt> | Greater-than sign   | <tt>0x3e</tt>      |
-/// | @     | <tt>U+0040</tt> | At sign             | <tt>0x40</tt>      |
-/// | \     | <tt>U+005c</tt> | Backslash           | <tt>0x5c</tt>      |
-/// | ^     | <tt>U+005e</tt> | Circumflex accent   | <tt>0x5e</tt>      |
-/// | _     | <tt>U+005f</tt> | Low line            | <tt>0x5f</tt>      |
-/// | `     | <tt>U+0060</tt> | Grave accent        | <tt>0x60</tt>      |
-/// | \|    | <tt>U+007c</tt> | Vertical bar        | <tt>0x7c</tt>      |
-/// | ~     | <tt>U+007e</tt> | Tilde               | <tt>0x7e</tt>      |
-/// | ¢     | <tt>U+00a2</tt> | Cent sign           | <tt>0xa2</tt>      |
-/// | £     | <tt>U+00a3</tt> | Pound sign          | <tt>0xa3</tt>      |
-/// | ¥     | <tt>U+00a5</tt> | Yen sign            | <tt>0xa5</tt>      |
-/// | §     | <tt>U+00a7</tt> | Section sign        | <tt>0xa7</tt>      |
-/// | ©     | <tt>U+00a9</tt> | Copyright sign      | <tt>0xa9</tt>      |
-/// | ¬     | <tt>U+00ac</tt> | Not sign            | <tt>0xac</tt>      |
-/// | ®     | <tt>U+00ae</tt> | Registered sign     | <tt>0xae</tt>      |
-/// | ¯     | <tt>U+00af</tt> | Macron              | <tt>0xaf</tt>      |
-/// | °     | <tt>U+00b0</tt> | Degree sign         | <tt>0xb0</tt>      |
-/// | ±     | <tt>U+00b1</tt> | Plus-minus sign     | <tt>0xb1</tt>      |
-/// | ¶     | <tt>U+00b6</tt> | Pilcrow sign        | <tt>0xb6</tt>      |
-/// | ·     | <tt>U+00b7</tt> | Middle dot          | <tt>0xb7</tt>      |
-/// | ×     | <tt>U+00d7</tt> | Multiplication sign | <tt>0xd7</tt>      |
-/// | ÷     | <tt>U+00f7</tt> | Division sign       | <tt>0xb6</tt>      |
-/// | €     | <tt>U+20ac</tt> | Euro sign           | <tt>0xa4</tt>      |
+/// | Glyph | UTF-8 Code      | Description                 | Latin-9 Equivalent |
+/// | ----- | --------------- | --------------------------- | ------------------ |
+/// | "     | <tt>U+0022</tt> | Quotation mark              | <tt>0x22</tt>      |
+/// | #     | <tt>U+0023</tt> | Number sign                 | <tt>0x23</tt>      |
+/// | $     | <tt>U+0024</tt> | Dollar sign                 | <tt>0x24</tt>      |
+/// | %     | <tt>U+0025</tt> | Percent sign                | <tt>0x25</tt>      |
+/// | &     | <tt>U+0026</tt> | Ampersand                   | <tt>0x26</tt>      |
+/// | *     | <tt>U+002a</tt> | Asterisk                    | <tt>0x2a</tt>      |
+/// | +     | <tt>U+002b</tt> | Plus sign                   | <tt>0x2b</tt>      |
+/// | /     | <tt>U+002f</tt> | Slash                       | <tt>0x2f</tt>      |
+/// | <     | <tt>U+003c</tt> | Less-than sign              | <tt>0x3c</tt>      |
+/// | =     | <tt>U+003d</tt> | Equal sign                  | <tt>0x3d</tt>      |
+/// | >     | <tt>U+003e</tt> | Greater-than sign           | <tt>0x3e</tt>      |
+/// | @     | <tt>U+0040</tt> | At sign                     | <tt>0x40</tt>      |
+/// | \     | <tt>U+005c</tt> | Backslash                   | <tt>0x5c</tt>      |
+/// | ^     | <tt>U+005e</tt> | Circumflex accent           | <tt>0x5e</tt>      |
+/// | _     | <tt>U+005f</tt> | Low line                    | <tt>0x5f</tt>      |
+/// | `     | <tt>U+0060</tt> | Grave accent                | <tt>0x60</tt>      |
+/// | \|    | <tt>U+007c</tt> | Vertical bar                | <tt>0x7c</tt>      |
+/// | ~     | <tt>U+007e</tt> | Tilde (Non-breaking space)  | <tt>0x20</tt>      |
+/// | ¢     | <tt>U+00a2</tt> | Cent sign                   | <tt>0xa2</tt>      |
+/// | £     | <tt>U+00a3</tt> | Pound sign                  | <tt>0xa3</tt>      |
+/// | ¥     | <tt>U+00a5</tt> | Yen sign                    | <tt>0xa5</tt>      |
+/// | §     | <tt>U+00a7</tt> | Section sign                | <tt>0xa7</tt>      |
+/// | ©     | <tt>U+00a9</tt> | Copyright sign              | <tt>0xa9</tt>      |
+/// | ¬     | <tt>U+00ac</tt> | Not sign                    | <tt>0xac</tt>      |
+/// | ®     | <tt>U+00ae</tt> | Registered sign             | <tt>0xae</tt>      |
+/// | ¯     | <tt>U+00af</tt> | Macron                      | <tt>0xaf</tt>      |
+/// | °     | <tt>U+00b0</tt> | Degree sign                 | <tt>0xb0</tt>      |
+/// | ±     | <tt>U+00b1</tt> | Plus-minus sign             | <tt>0xb1</tt>      |
+/// | ¶     | <tt>U+00b6</tt> | Pilcrow sign                | <tt>0xb6</tt>      |
+/// | ·     | <tt>U+00b7</tt> | Middle dot                  | <tt>0xb7</tt>      |
+/// | ×     | <tt>U+00d7</tt> | Multiplication sign         | <tt>0xd7</tt>      |
+/// | ÷     | <tt>U+00f7</tt> | Division sign               | <tt>0xb6</tt>      |
+/// | €     | <tt>U+20ac</tt> | Euro sign                   | <tt>0xa4</tt>      |
 #[derive(Debug, Clone)]
 pub struct SymbolData {
     /// Stores one symbol character
